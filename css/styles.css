@@ -45,12 +45,16 @@ body {
 }
 
 @font-face {
-  font-family: "Assassin$";
-  src: url("fonts/assassin/Assassin$.ttf") format("ttf");
+  font-family: "roadway";
+  src: url("/fonts/roadway/ROADWAY_.woff") format("woff");
 }
 @font-face {
   font-family: "Dolce Vita Light";
   src: url("fonts/dolce_vita/DolceVitaLight.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Assassin";
+  src: url("/fonts/assassin/Assassin_.woff") format("woff");
 }
 .nav-link {
   color: white;
@@ -78,15 +82,16 @@ body {
 }
 
 #phrase span {
-  font-family: "Assassin$", Helvetica, sans-serif;
+  font-family: "Assassin", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 #phrase {
   position: absolute;
-  top: 60%;
-  left: 24%;
+  top: 62%;
+  left: 15%;
+  height: 200px;
   color: white;
-  font-size: 24px;
+  font-size: 36px;
   display: inline-block;
   padding: 1em 5em 1em 1em;
   overflow: hidden;
@@ -106,13 +111,13 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  -webkit-transform-origin: 100% 0;
-  -ms-transform-origin: 100% 0;
-  transform-origin: 100% 0;
-  -webkit-transform: skew(-45deg);
-  -ms-transform: skew(-45deg);
-  transform: skew(-145deg);
+  background: rgba(232, 250, 70, 0.6);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  transform: skew(-30deg);
   z-index: -1;
 }
 
