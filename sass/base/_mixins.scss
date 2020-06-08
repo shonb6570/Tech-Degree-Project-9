@@ -1,0 +1,18 @@
+// ==========================================================================
+// Mixins
+// ==========================================================================
+
+
+//Media queries
+
+//Media queries
+
+@mixin for-size($size) {
+    @if $size == phone {
+      @media (max-width: 599px) { @content; }
+    } @else if $size == tablet {
+      @media (min-width: 600px) { @content; }
+    } @else if $size == desktop {
+      @media (min-width: 1200px) { @content; }
+  }
+};

@@ -1,0 +1,143 @@
+/* --------------------------------
+        Keyframes
+---------------------------------*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* --------------------------------
+       BG video styles
+---------------------------------*/
+.paused {
+  display: none;
+}
+
+#bgVideo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 984px;
+}
+
+.video {
+  position: relative;
+  height: 600px;
+  min-width: 100%;
+  min-height: 100%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadein 2s;
+  z-index: -1;
+}
+
+body {
+  background-color: black;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+@font-face {
+  font-family: "Assassin$";
+  src: url("fonts/assassin/Assassin$.ttf") format("ttf");
+}
+@font-face {
+  font-family: "Dolce Vita Light";
+  src: url("fonts/dolce_vita/DolceVitaLight.ttf") format("ttf");
+}
+.nav-link {
+  color: white;
+  font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
+  font-size: 24px;
+}
+
+.main-heading {
+  position: absolute;
+  top: 90%;
+  height: 6rem;
+  font-family: "Dolce Vita Light", Helvetica, sans-serif;
+  font-size: 44px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.h1 {
+  padding-top: 10px;
+}
+
+.letter,
+.space {
+  font-size: 20px;
+}
+
+#phrase span {
+  font-family: "Assassin$", Helvetica, sans-serif;
+}
+
+#phrase {
+  position: absolute;
+  top: 60%;
+  left: 24%;
+  color: white;
+  font-size: 24px;
+  display: inline-block;
+  padding: 1em 5em 1em 1em;
+  overflow: hidden;
+  width: 100%;
+}
+@media (min-width: 1200px) {
+  #phrase {
+    top: 20%;
+    left: 10%;
+  }
+}
+
+#phrase:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-45deg);
+  -ms-transform: skew(-45deg);
+  transform: skew(-145deg);
+  z-index: -1;
+}
+
+#home:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  -webkit-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+  -webkit-transform: skew(-30deg);
+  -ms-transform: skew(-30deg);
+  transform: skew(-30deg);
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  #home:after {
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    transform: skew(-50deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
