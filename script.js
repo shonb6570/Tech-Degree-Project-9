@@ -3,6 +3,7 @@
 const vid1 = document.getElementById("vid1");
 const vid2 = document.getElementById("vid2");
 const vid3 = document.getElementById("vid3");
+const vid4 = document.getElementById("vid4");
 
 const phrase = document.getElementById('phrase');
 
@@ -23,10 +24,15 @@ window.onload = function(){
         play(vid3);
     });
     vid3.addEventListener("ended", function(){ 
-        playVideo("vid1"); 
+        playVideo("vid4"); 
         pause(vid3);
-        play(vid1);
+        play(vid4);
     });    
+    vid4.addEventListener("ended", function(){ 
+        playVideo("vid1"); 
+        pause(vid4);
+        play(vid1);
+    });  
 }
 /**
  * Plays video based on ID of a video element
@@ -72,3 +78,27 @@ const quotes = [
     }; 
 
     generateQuote();
+
+    const myScroll = new LocomotiveScroll({
+        el: document,
+        elMobile: document,
+        name: 'scroll',
+        offset: [0, 0],
+        repeat: false,
+        smooth: false, // smooth scroll
+        smoothMobile: false, // smooth scroll on mobile
+        direction: 'vertical', // or horizontal
+        lerp: 1, // inertia
+        class: 'is-inview',
+        scrollbarClass: 'c-scrollbar',
+        scrollingClass: 'has-scroll-scrolling',
+        draggingClass: 'has-scroll-dragging',
+        smoothClass: 'has-scroll-smooth',
+        initClass: 'has-scroll-init',
+        getSpeed: false,
+        getDirection: false,
+        multiplier: 1,
+        firefoxMultiplier: 50,
+        touchMultiplier: 2,
+        scrollFromAnywhere: false
+  });

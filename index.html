@@ -10,6 +10,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/locomotive-scroll.min.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
   <body>
@@ -32,22 +33,27 @@
 
           <div id="bgVideo">
             <video class="video" id="vid1" autoplay muted>
-              <source src="video/cliff.mp4" type="video/mp4">
+              <source src="video/ocean_final.mp4" type="video/mp4">
             </video>
 
             <video id="vid2" class="video paused" muted>
-                <source src="video/forest.mp4" type="video/mp4">
+                <source src="video/building_final.mp4" type="video/mp4">
             </video>
 
             <video id="vid3" class="video paused" muted>
-                <source src="video/winter.mp4" type="video/mp4">
+                <source src="video/cliff_final.mp4" type="video/mp4">
             </video>
+
+            <video id="vid4" class="video paused" muted>
+              <source src="video/river_final.mp4" type="video/mp4">
+            </video>
+
           </div>
           <!-- /bgVideo -->
 
           <!-- main-heading -->
           <div class="container-fluid pl-4 main-heading">
-            <p class="h1"> Shaun Bolak - Web Designer</p>
+            <p class="h1"> Shaun Bolak // Web Designer</p>
           </div>
           <!-- /main-heading -->
 
@@ -58,7 +64,20 @@
           <!-- /phrase (quote container) -->
 
     </div><!-- /home container -->
-    
+
+      <div data-scroll-container id="projects">
+        <div data-scroll-section>
+            <h1 data-scroll>Hey</h1>
+            <p data-scroll>👋</p>
+        </div>
+        <div data-scroll-section>
+            <h2 data-scroll data-scroll-speed="1">What's up?</h2>
+            <p data-scroll data-scroll-speed="2">😬</p>
+        </div>
+      </div>
+
+    </div>
+    <script src="locomotive-scroll.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
