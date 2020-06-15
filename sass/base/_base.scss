@@ -3,7 +3,8 @@
 body {
     background-color: black; 
     overflow-x: hidden;
-    height: 6000px;
+    height: 3000px;
+    z-index: -1;
 }
 
 .nav {
