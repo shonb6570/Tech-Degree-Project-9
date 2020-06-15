@@ -41,18 +41,44 @@
   }
 }
 
-#projects {
-  margin-top: 980px;
-  color: white;
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+#projectsSectionContainer {
+  margin-top: 900px;
+  height: 629px;
+  background: linear-gradient(#000, #6AF0D5);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+  z-index: -3;
 }
 
-.p1,
-.p2,
-.p3 {
-  border: 2px solid white;
-  border-radius: 5px;
-  margin: 10px 50px;
-  height: 200px;
+#projects {
+  margin-top: 1800px;
+  height: 280px;
+  width: 70%;
+  position: absolute;
+  left: 25%;
+  z-index: -1;
+}
+
+#mountains {
+  height: 350px;
+  position: relative;
+  left: 100%;
+  margin-top: 280px;
+}
+
+.animate {
+  animation: fade-in 1.5s ease-in-out;
 }
 
 body {
@@ -63,6 +89,11 @@ body {
 
 .nav {
   background-color: rgba(0, 0, 0, 0.4);
+}
+
+.affix {
+  top: 0;
+  position: fixed;
 }
 
 @font-face {

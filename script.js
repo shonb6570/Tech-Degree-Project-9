@@ -6,6 +6,9 @@ const vid3 = document.getElementById("vid3");
 const vid4 = document.getElementById("vid4");
 
 const phrase = document.getElementById('phrase');
+const projects = document.getElementById('projects');
+const projectTitleWrapper = document.getElementById('projectTitleWrapper');
+const mountains = document.getElementById('mountains');
 
 /**
  * Window onload play order for embedded videos
@@ -79,26 +82,26 @@ const quotes = [
 
     generateQuote();
 
-    const myScroll = new LocomotiveScroll({
-        el: document,
-        elMobile: document,
-        name: 'scroll',
-        offset: [0, 0],
-        repeat: false,
-        smooth: false, // smooth scroll
-        smoothMobile: false, // smooth scroll on mobile
-        direction: 'vertical', // or horizontal
-        lerp: 1, // inertia
-        class: 'is-inview',
-        scrollbarClass: 'c-scrollbar',
-        scrollingClass: 'has-scroll-scrolling',
-        draggingClass: 'has-scroll-dragging',
-        smoothClass: 'has-scroll-smooth',
-        initClass: 'has-scroll-init',
-        getSpeed: false,
-        getDirection: false,
-        multiplier: 1,
-        firefoxMultiplier: 50,
-        touchMultiplier: 2,
-        scrollFromAnywhere: false
-  });
+
+
+//parallax animation for "Projects" heading
+
+window.addEventListener("scroll", function() {
+    const distance = window.scrollY;
+    console.log(distance);
+    if(distance < 1000){
+        projects.style.transform = `translateY(${distance *
+        -.7}px)`;
+        projectTitleWrapper.style.transform = `translateY(${distance * -1}px)`;
+    }
+});
+
+//parallax animation for "mountains" heading
+
+window.addEventListener("scroll", function() {
+    const distance = window.scrollY;
+    if(distance < 1000){
+        mountains.style.transform = `translateX(${distance *
+        -1.5}px)`;
+    }
+});
