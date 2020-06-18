@@ -10,13 +10,13 @@
 
 @keyframes move-left {
     100% {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     }
 }
 
 @keyframes move-right {
     from {
-        transform: translateX(-100%);
+        transform: translateX(-200%);
     } to {
         transform: translateX(0);
     }
@@ -27,7 +27,7 @@
 #projectsSectionContainer{
     margin-top: 900px;
     height: 629px;
-    background: linear-gradient(#000, #6AF0D5);
+    background: linear-gradient(#000, rgb(252, 186, 43));
     position: absolute;
     top: 50%;
     left: 50%;
@@ -57,7 +57,6 @@
     left: 180%;
     margin-top: 380px;
     @include for-size(desktop){
-        height: 350px;
         left: 100%;
     }
 }
@@ -93,6 +92,10 @@
     @include for-size(desktop){
         margin-top: 200px;
     }
+}
+
+.awesomeCo {
+    transform: translateX(-200%) 
 }
 
 

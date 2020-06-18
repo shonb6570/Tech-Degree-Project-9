@@ -84,6 +84,7 @@ const quotes = [
 
 window.addEventListener("scroll", function() {
     const distance = window.scrollY;
+    console.log(distance);
     if(distance < 915){
         projects.style.transform = `translateY(${distance *
         -.7}px)`;
@@ -94,13 +95,16 @@ window.addEventListener("scroll", function() {
         -1.5}px)`;
     }
     //Slide-in function for projects
-    if(distance >= 1450 && distance <= 1560){
+    //if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
+    // else, slide off screen if scroll position is above the project
+
+    else if(distance < 1050 && distance <= 1260){
         awesomeCo.forEach(element => {
             element.style.transform = "move-left 1.5s ease-in-out";
         });
     }
 
-    else if(distance > 1560){
+    else if(distance >= 1261){
         awesomeCo.forEach(element => {
             element.style.animation = "move-right 1.5s ease-in-out";
         });

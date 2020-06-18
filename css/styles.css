@@ -51,12 +51,12 @@
 }
 @keyframes move-left {
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 @keyframes move-right {
   from {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
   to {
     transform: translateX(0);
@@ -65,7 +65,7 @@
 #projectsSectionContainer {
   margin-top: 900px;
   height: 629px;
-  background: linear-gradient(#000, #6AF0D5);
+  background: linear-gradient(#000, #fcba2b);
   position: absolute;
   top: 50%;
   left: 50%;
@@ -98,7 +98,6 @@
 }
 @media (min-width: 1200px) {
   #mountains {
-    height: 350px;
     left: 100%;
   }
 }
@@ -135,6 +134,10 @@
   .spaced {
     margin-top: 200px;
   }
+}
+
+.awesomeCo {
+  transform: translateX(-200%);
 }
 
 body {
