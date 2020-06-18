@@ -10,6 +10,7 @@ const projects = document.getElementById('projects');
 const projectTitleWrapper = document.getElementById('projectTitleWrapper');
 const mountains = document.getElementById('mountains');
 
+const awesomeCo = document.querySelectorAll(".awesomeCo");
 /**
  * Window onload play order for embedded videos
  */
@@ -27,15 +28,10 @@ window.onload = function(){
         play(vid3);
     });
     vid3.addEventListener("ended", function(){ 
-        playVideo("vid4"); 
-        pause(vid3);
-        play(vid4);
-    });    
-    vid4.addEventListener("ended", function(){ 
         playVideo("vid1"); 
-        pause(vid4);
+        pause(vid3);
         play(vid1);
-    });  
+    });    
 }
 /**
  * Plays video based on ID of a video element
@@ -84,24 +80,30 @@ const quotes = [
 
 
 
-//parallax animation for "Projects" heading
+//parallax animation for "Projects" heading and Mountains SVG
 
 window.addEventListener("scroll", function() {
     const distance = window.scrollY;
-    console.log(distance);
-    if(distance < 1000){
+    if(distance < 915){
         projects.style.transform = `translateY(${distance *
         -.7}px)`;
         projectTitleWrapper.style.transform = `translateY(${distance * -1}px)`;
     }
-});
-
-//parallax animation for "mountains" heading
-
-window.addEventListener("scroll", function() {
-    const distance = window.scrollY;
-    if(distance < 1000){
+    else if(distance < 1000){
         mountains.style.transform = `translateX(${distance *
         -1.5}px)`;
     }
+    //Slide-in function for projects
+    if(distance >= 1450 && distance <= 1560){
+        awesomeCo.forEach(element => {
+            element.style.transform = "move-left 1.5s ease-in-out";
+        });
+    }
+
+    else if(distance > 1560){
+        awesomeCo.forEach(element => {
+            element.style.animation = "move-right 1.5s ease-in-out";
+        });
+    }
+
 });
