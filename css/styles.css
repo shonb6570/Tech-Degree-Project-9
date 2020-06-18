@@ -136,10 +136,6 @@
   }
 }
 
-.awesomeCo {
-  transform: translateX(-200%);
-}
-
 body {
   background-color: black;
   overflow-x: hidden;

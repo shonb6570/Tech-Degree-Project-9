@@ -94,9 +94,12 @@ window.addEventListener("scroll", function() {
         mountains.style.transform = `translateX(${distance *
         -1.5}px)`;
     }
-    //Slide-in function for projects
-    //if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
+    // Slide-in function for projects
+    // if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
     // else, slide off screen if scroll position is above the project
+
+    //if partially working code won awards, this would have a gold medal
+    //keyframe is located in "projects" partial file
 
     else if(distance < 1050 && distance <= 1260){
         awesomeCo.forEach(element => {
@@ -111,3 +114,23 @@ window.addEventListener("scroll", function() {
     }
 
 });
+
+
+//alternative code attempt to get element to slide in and out based on screen position
+//runs without error, but for the LOVE OF GOD I cant get it work correctly lol
+
+//see "projects" file for keyframe animation and added class styling.
+
+
+// window.addEventListener("scroll", function(event) {
+  
+//     awesomeCo.forEach(element => {
+//         let rect = element.getBoundingClientRect();
+//         let elTop = rect.top;
+//         let elBottom = rect.bottom;
+//       if (elTop >= 0 && elBottom <= window.innerHeight) {
+//         element.addClass("slide-in"); 
+//       } 
+//     });
+    
+// });

@@ -94,9 +94,19 @@
     }
 }
 
-.awesomeCo {
-    transform: translateX(-200%) 
-}
+
+//   @keyframes slide-in {
+//     to { transform: translateX(0); }
+//   }
+
+// alternative slide in code that I tried, which also does not seem to work (see js file for commented out script)
+// However, this also is dumpster fire.
+// .come-in {
+//     transform: translateX(-200%);
+//     animation: come-in 0.8s ease forwards;
+//   }
+
+
 
 
 
