@@ -8,17 +8,50 @@
     }
 }
 
-@keyframes move-left {
-    100% {
-        transform: translateX(-200%);
+@keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
     }
 }
+
 
 @keyframes move-right {
     from {
         transform: translateX(-200%);
-    } to {
-        transform: translateX(0);
+    } 
+    to {
+        transform: none;
+    }
+}
+
+@keyframes move-left {
+    from {
+        transform: none;
+    } 
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+
+@keyframes move-left-two {
+    from {
+        transform: translateX(100%);
+    } 
+    to {
+        transform: none;
+    }
+}
+
+@keyframes move-right-two {
+    from {
+        transform: none;
+    } 
+    to {
+        transform: translateX(100%);
     }
 }
 
@@ -94,18 +127,30 @@
     }
 }
 
+.awesomeCo {
+    transform: translateX(-200%);
+}
 
-//   @keyframes slide-in {
-//     to { transform: translateX(0); }
-//   }
+.drumSpace {
+    transform: translateX(100%);
+}
 
-// alternative slide in code that I tried, which also does not seem to work (see js file for commented out script)
-// However, this also is dumpster fire.
-// .come-in {
-//     transform: translateX(-200%);
-//     animation: come-in 0.8s ease forwards;
-//   }
 
+
+#awesomeCoCopy:after,
+#drumSpaceCopy:after {
+    content: '';
+    position: absolute;
+    top: 24%;
+    left: 27%;
+    width: 180%;
+    height: 87%;
+    background: linear-gradient(to right, rgba(252, 186, 43, .7), #000, #000);
+    -webkit-transform: skew(-30deg);
+    -ms-transform: skew(-30deg);
+    transform: skew(-30deg);
+    z-index: -1;
+}
 
 
 

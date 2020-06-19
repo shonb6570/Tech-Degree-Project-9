@@ -11,6 +11,10 @@ const projectTitleWrapper = document.getElementById('projectTitleWrapper');
 const mountains = document.getElementById('mountains');
 
 const awesomeCo = document.querySelectorAll(".awesomeCo");
+const copyOverlay = document.querySelectorAll(".copyOverlayLeft");
+const drumSpace = document.querySelectorAll(".drumSpace");
+
+
 /**
  * Window onload play order for embedded videos
  */
@@ -37,18 +41,18 @@ window.onload = function(){
  * Plays video based on ID of a video element
  */
 
-function playVideo(videoID){
+const playVideo = (videoID) => {
     const videoElement = document.getElementById(videoID);
     videoElement.play();
     videoElement.classList.remove("paused"); 
 }
 
-function pause(id) {
+const pause = (id) => {
     id.classList.remove("video");
     id.classList.add("paused");
 }
 
-function play(id) {
+const play = (id) => {
     id.classList.remove("paused");
     id.classList.add("video");
 }
@@ -79,6 +83,59 @@ const quotes = [
     generateQuote();
 
 
+// Slide-in function for projects
+// if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
+// else, slide off screen if scroll position is above the project
+
+const rightAnimation = "move-right 1.5s ease-in-out forwards";
+const leftAnimation = "move-left 1.5s ease-in-out forwards";
+const rightAnimation2 = "move-right-two 1.5s ease-in-out forwards";
+const leftAnimation2 = "move-left-two 1.5s ease-in-out forwards";
+
+
+const moveRight = (scrollValue, el) => {
+    const distance = window.scrollY;
+    if(distance >= scrollValue){
+        el.forEach(element => {
+            element.style.animation = rightAnimation;
+        });
+    }
+}
+
+const moveRightTwo = (scrollValue, el) => {
+    const distance = window.scrollY;
+    if(distance <= scrollValue){
+        el.forEach(element => {
+            element.style.animation = rightAnimation2;
+        });
+    }
+}
+
+const moveLeft = (scrollValue, el) => {
+    const distance = window.scrollY;
+    if(distance <= scrollValue){
+        el.forEach(element => {
+            element.style.animation = leftAnimation;
+        });
+    }
+}
+
+const moveLeftTwo = (scrollValue, el) => {
+    const distance = window.scrollY;
+    if(distance >= scrollValue){
+        el.forEach(element => {
+            element.style.animation = leftAnimation2;
+        });
+    }
+}
+
+const moveLeftBGElement = (scrollValue, el) => {
+    const distance = window.scrollY;
+    if(distance <= scrollValue){
+            element.style.animation = leftAnimation;
+    }
+}
+
 
 //parallax animation for "Projects" heading and Mountains SVG
 
@@ -94,43 +151,11 @@ window.addEventListener("scroll", function() {
         mountains.style.transform = `translateX(${distance *
         -1.5}px)`;
     }
-    // Slide-in function for projects
-    // if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
-    // else, slide off screen if scroll position is above the project
+// slide in projects on scroll
 
-    //if partially working code won awards, this would have a gold medal
-    //keyframe is located in "projects" partial file
-
-    else if(distance < 1050 && distance <= 1260){
-        awesomeCo.forEach(element => {
-            element.style.transform = "move-left 1.5s ease-in-out";
-        });
-    }
-
-    else if(distance >= 1261){
-        awesomeCo.forEach(element => {
-            element.style.animation = "move-right 1.5s ease-in-out";
-        });
-    }
-
+    moveRight(1261, awesomeCo);
+    moveLeft(1260, awesomeCo);
+    moveLeftTwo(1661, drumSpace);
+    moveRightTwo(1660, drumSpace);
 });
 
-
-//alternative code attempt to get element to slide in and out based on screen position
-//runs without error, but for the LOVE OF GOD I cant get it work correctly lol
-
-//see "projects" file for keyframe animation and added class styling.
-
-
-// window.addEventListener("scroll", function(event) {
-  
-//     awesomeCo.forEach(element => {
-//         let rect = element.getBoundingClientRect();
-//         let elTop = rect.top;
-//         let elBottom = rect.bottom;
-//       if (elTop >= 0 && elBottom <= window.innerHeight) {
-//         element.addClass("slide-in"); 
-//       } 
-//     });
-    
-// });
