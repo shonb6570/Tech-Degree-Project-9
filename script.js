@@ -155,7 +155,7 @@ window.addEventListener("scroll", function() {
 
     moveRight(1261, awesomeCo);
     moveLeft(1260, awesomeCo);
-    moveLeftTwo(1661, drumSpace);
-    moveRightTwo(1660, drumSpace);
+    moveLeftTwo(1981, drumSpace);
+    moveRightTwo(1980, drumSpace);
 });
 
