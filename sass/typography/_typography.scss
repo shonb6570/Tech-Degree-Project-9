@@ -13,20 +13,83 @@
     font-family: "Assassin";
     src: url("../fonts/assassin/Assassin_.woff") format("woff");
   }
-
-
-
-// Navs
-
-.nav-link {
-    color: white;
-    font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
-    font-size: 24px;
+@font-face {
+    font-family: "Heaters";
+    src: url("../fonts/heaters/Heaters.otf") format("otf");
+}
+@font-face {
+    font-family: "Coolvetica";
+    src: url("../fonts/coolvetica/Coolvetica.otf") format("otf");
 }
 
 
 
-// 
+// Fonts
+.nav-link,
+.h1 {
+    font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
+}
+
+#phrase span {
+    font-family: "Assassin", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#aboutTitle{
+    font-family: "Heaters", Arial, Helvetica, sans-serif;
+    font-size: 160pt;
+    margin-left: -20px;
+    @include for-size(tablet){
+        font-size: 200pt;
+        margin-left: 0;
+    }
+}
+
+.title{
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 36pt;
+}
+
+.sub-heading{
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 26pt;
+}
+
+.copy {
+    font-size: 18pt;
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+}
+
+.about-me-bold {
+    font-size: 42pt;
+}
+
+.nav-link,
+.h1,
+#phrase span,
+.title,
+.about-me-copy {
+    color: white;
+}
+
+#aboutTitle {
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.about-me  {
+    font-size: 38pt;
+    margin-top: -50px;
+}
+
+
+.nav-link {
+    font-size: 24px;
+}
+
+//navs
+
+.navigation {
+    z-index: 3;
+}
 
 .main-heading {
     position: absolute;
@@ -37,9 +100,7 @@
 
 .h1 {
     padding-top: 10px;
-    font-family: "Dolce Vita Light", Helvetica, sans-serif;
     font-size: 44px;
-    color: white;
 }
 
 .letter,
@@ -49,7 +110,6 @@
 
 #phrase span{
     padding-left: 20px;
-    font-family: "Assassin", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     @include for-size(tablet){
         max-width: 300px;
     }
@@ -58,7 +118,6 @@
     position: absolute;
     max-width: 600px;
     top: 62%;
-    color: rgb(255, 255, 255);
     font-size: 28px;
     display: inline-block;
     padding: 1em 5em 1em 1em;
