@@ -103,13 +103,13 @@ const distance = window.scrollY;
 // slide function takes the current scroll value (position on page) and the element targeted, 
 // and adds an animation
 
-const slide = (scrollValue, el, animationName) => {
-    if(distance >= scrollValue){
-        el.forEach(element => {
-            element.style.animation = animationName;
-        });
-    }
-}
+// const slide = (scrollValue, el, animationName) => {
+//     if(distance >= scrollValue){
+//         el.forEach(element => {
+//             element.style.animation = animationName;
+//         });
+//     }
+// }
 
 
 const moveRight = (scrollValue, el) => {
