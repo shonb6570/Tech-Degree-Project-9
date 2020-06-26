@@ -16,9 +16,7 @@ body {
     position:fixed;
 }
 
-hr {
-    height: 5px;
-    width: 50%;
-    color: white;
-    z-index: 3;
+// element to keep normal page flow - the BG video element is out of normal page flow
+.margin {
+    height: 940px;
 }

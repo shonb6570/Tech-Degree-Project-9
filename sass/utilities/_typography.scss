@@ -25,6 +25,16 @@
 
 
 // Fonts
+
+.nav-link,
+.h1,
+#phrase span,
+#aboutHeadline,
+.title,
+.about-me-copy {
+    color: white;
+}
+
 .nav-link,
 .h1 {
     font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
@@ -34,8 +44,21 @@
     font-family: "Assassin", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#aboutTitle{
+
+.headline {
     font-family: "Heaters", Arial, Helvetica, sans-serif;
+    font-size: 160pt;
+    color: rgba(255, 255, 255, 0.692);
+}
+
+.title,
+.sub-heading,
+.copy,
+#aboutHeadline {
+    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+}
+
+#aboutTitle{
     font-size: 160pt;
     margin-left: -20px;
     @include for-size(tablet){
@@ -44,36 +67,40 @@
     }
 }
 
-.title{
-    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+#aboutHeadline {
+    max-width: 800px;
+    margin-top: -3rem;
     font-size: 36pt;
+    @include for-size(desktop){
+       padding-left: 60px;
+       font-size: 42pt;
+        }
+}
+
+
+.title {
+    font-size: 36pt;
+    color: rgb(228, 228, 228);
 }
 
 .sub-heading{
-    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
     font-size: 26pt;
 }
 
 .copy {
-    font-size: 18pt;
-    font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+    font-size: 12pt;
+    @include for-size(tablet){
+        font-size: 14pt;
+         }
 }
 
 .about-me-bold {
     font-size: 42pt;
+    @include for-size(desktop){
+        font-size: 46pt;
+         }
 }
 
-.nav-link,
-.h1,
-#phrase span,
-.title,
-.about-me-copy {
-    color: white;
-}
-
-#aboutTitle {
-    color: rgba(255, 255, 255, 0.692);
-}
 
 .about-me  {
     font-size: 38pt;
@@ -152,7 +179,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(252, 186, 43, 0.8);
+    background: $lightning-yellow-lighter;
     -webkit-transform-origin: 0 100%;
     -ms-transform-origin: 0 100%;
     transform-origin: 0 100%;
@@ -212,3 +239,10 @@
         transition-timing-function: ease-in-out;
     }
   }
+
+  .badges {
+      background-color: #03C1FC;
+      color: rgb(75, 75, 75);
+      font-size: 16pt;
+  }
+

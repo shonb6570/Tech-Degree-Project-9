@@ -60,7 +60,17 @@
         transform: translateX(-28%);
     } 
     to {
-        transform: none;
+        transform: translateX(-8%);
+    }
+}
+
+@keyframes move-left-mountains {
+    from {
+        transform: translateX(-8%);
+    } 
+    to {
+
+        transform: translateX(-28%);
     }
 }
 
@@ -69,39 +79,53 @@
         transform: none;
     } 
     to {
-        transform: translateY(-100%);
+        transform: translateY(-80%);
+    }
+}
+
+@keyframes move-down-project-title {
+    from {
+        transform: translateY(-80%);
+    } 
+    to {
+        transform: none;
     }
 }
 
 
 
 #projectsSectionContainer{
-    margin-top: 2000px;
-    height: 729px;
-    background: linear-gradient(#000, rgb(252, 186, 43));
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 1329px;
+    background: linear-gradient(#000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
     overflow: hidden;
     z-index: -4;
+
     @include for-size(tablet){
-        margin-top: 1800px;
+        height: 900px;
+    }
+
+    @include for-size(desktop){
+        height: 800px;
     }
 }
 
 #projects{
-    margin-top: 680px;
+    margin-top: 1100px;
     height: 200px;
     width: 80%;
     position: absolute;
-    left: 10%;
-    z-index: -1;
+    left: 15%;
+    z-index: 1;
+
+    @include for-size(tablet){
+        margin-top: 700px;
+        width: 70%;
+    }
 
     @include for-size(desktop){
-        height: 200px;
-        width: 50%;
-        left: 25%;
+        margin-top: 580px;
+        width: 40%;
+        left: 35%;
     }
 }
 
@@ -109,9 +133,16 @@
     height: 250px;
     transform: translateX(-28%);
     position: relative;
-    margin-top: 480px;
+    margin-top: 1080px;
+    z-index: 2;
+    @include for-size(tablet){
+        margin-top: 651px;
+        left: 20%;
+    }
+
     @include for-size(desktop){
         left: 40%;
+        margin-top: 550px;
     }
 }
 
@@ -123,12 +154,17 @@
 .gif {
     border: 1px solid white;
     border-radius: 5px;
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
     width: 100%;
     min-height: 300px;
+    padding: 0 10px;
+    @include for-size(desktop){
+        width: 70%;
+    }
 }
 
 #projectExamples {
-    margin-top: 600px;
+    margin-top: 5rem;
     width: 100%;
     height: 400px;
 }
@@ -148,29 +184,71 @@
     }
 }
 
-.awesomeCo {
+.left {
     transform: translateX(-200%);
 }
 
-.drumSpace {
+.right {
     transform: translateX(200%);
 }
 
-
+.projectBG{
+    background: linear-gradient( #000, rgba(255, 255, 255, 0.359),rgba(255, 255, 255, 0.201), #000);
+    z-index: -3;
+    @include for-size(tablet){
+        background: none;
+    }
+}
 
 #awesomeCoCopy:after,
-#drumSpaceCopy:after {
+#drumSpaceCopy:after,
+#dataAnalyticsCopy:after,
+#styleGuideCopy:after {
     content: '';
     position: absolute;
-    top: 24%;
-    left: 27%;
+    top: 16%;
     width: 180%;
-    height: 87%;
-    background: linear-gradient(to right, rgba(252, 186, 43, .7), #000, #000);
-    -webkit-transform: skew(-30deg);
-    -ms-transform: skew(-30deg);
-    transform: skew(-30deg);
+    height: 80%;
+    background: linear-gradient(to right, $projects-BG-mobile-color, #000, #000);
+    -webkit-transform: skew(-11deg);
+    -ms-transform: skew(-11deg);
+    transform: skew(-11deg);
     z-index: -1;
+    @include for-size(tablet){
+        background: linear-gradient(to right, $projects-BG-color, #000, #000);
+    }
+}
+
+#awesomeCoCopy:after,
+#drumSpaceCopy:after,
+#dataAnalyticsCopy:after {
+    -webkit-transform: skew(-11deg);
+    -ms-transform: skew(-11deg);
+    transform: skew(-11deg);
+}
+
+// chevron slanting left
+#styleGuideCopy:after {
+    -webkit-transform: skew(-11deg);
+    -ms-transform: skew(-11deg);
+    transform: skew(11deg);
+}
+
+#awesomeCoCopy:after {
+    left: 84.5%;
+}
+
+#drumSpaceCopy:after {
+    left: 67.5%;
+}
+
+#dataAnalyticsCopy:after {
+    left: 32%;
+}
+
+// chevron slanting right
+#styleGuideCopy:after {
+    left: 32%;
 }
 
 

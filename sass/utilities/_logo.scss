@@ -1,0 +1,80 @@
+/* ============================================= */
+/*          Project logos SVG styles                 */
+/* ============================================= */
+
+
+// awesomeCo
+
+
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillStroke {
+    100% {
+        fill: $awesomeco-logo-main-path-color;
+    }
+}
+
+@keyframes fillPath {
+    100% {
+        fill: $awesomeco-logo-main-fill;
+    }
+}
+
+#logo {
+    height: 150px;
+    width: 350px; 
+}
+
+
+
+#logoFill {
+    fill: $awesomeco-logo-main-fill;
+    stroke: $awesomeco-logo-main-fill;
+    animation: fillPath 1.5s 1.2s forwards;
+}
+
+.logo-stroke {
+    stroke: $awesomeco-logo-main-path-color;
+    stroke-width: 1;
+    stroke-dasharray: 325;
+    stroke-dashoffset: 325;
+    animation: offset 3s linear forwards, fillStroke 1.2s 3s forwards;
+}
+
+
+// drumspace
+
+
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+
+
+@keyframes fill-drumSpace {
+    100% {
+        fill: $drumspace-logo-main-color;
+    }
+}
+
+
+/* ============================================= */
+/*          Main logo                            */
+/* ============================================= */
+
+
+#drumSpaceLogo {
+    height: 200px;
+    width: 450px;
+}
+
+#drumSpaceLogo path{
+    stroke: $drumspace-logo-main-color;
+    stroke-width: .25;
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+    animation: offset 4s linear forwards, fill-drumSpace .8s 4s forwards;
+}

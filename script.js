@@ -1,21 +1,24 @@
-// variables
+// Global Variables
 
+            // video elements
 const vid1 = document.getElementById("vid1");
 const vid2 = document.getElementById("vid2");
 const vid3 = document.getElementById("vid3");
-const vid4 = document.getElementById("vid4");
 
+            // quote element
 const phrase = document.getElementById('phrase');
 
+            // projects section elements
 const aboutTitle = document.getElementById('aboutTitle');
-
 const projects = document.getElementById('projects');
 const projectTitleWrapper = document.getElementById('projectTitleWrapper');
 const mountains = document.getElementById('mountains');
 
+            // individual project elements
 const awesomeCo = document.querySelectorAll(".awesomeCo");
-const copyOverlay = document.querySelectorAll(".copyOverlayLeft");
 const drumSpace = document.querySelectorAll(".drumSpace");
+const dataAnalytics = document.querySelectorAll(".dataAnalytics");
+const styleGuide = document.querySelectorAll(".styleGuide");
 
 
 /**
@@ -73,13 +76,15 @@ const quotes = [
     ];
     
     
-    //Generate random quote function
-    
+    /**
+     * Generates random quote based on a random number in the quotes array 
+     */
     const generateQuote = () => {
         //create random number between 1 - 7 for quote selection
         let randNum = Math.floor( Math.random() * (quotes.length) );
         //select quote container span
         const quoteContainer = document.querySelector('#phrase span');
+        // set html content of quote container
         quoteContainer.innerHTML = quotes[randNum];
     }; 
 
@@ -87,118 +92,74 @@ const quotes = [
 
 
 // Slide-in function for projects
-// if the scroll position on page is near the AwesomeCo example gif, activate keyframe animation to slide in
-// else, slide off screen if scroll position is above the project
+// if the scroll position on page is near element, activate keyframe animation to slide in frame
+// else, slide off screen
 
+            // animation options
 const rightAnimation = "move-right 1.5s ease-in-out forwards";
 const leftAnimation = "move-left 1.5s ease-in-out forwards";
 const rightAnimation2 = "move-right-two 1.5s ease-in-out forwards";
 const leftAnimation2 = "move-left-two 1.5s ease-in-out forwards";
 const moveRightBG = "move-right-mountains 1.5s ease-in-out forwards";
+const moveLeftBG = "move-left-mountains 1.5s ease-in-out forwards";
 const moveUpBG = "move-up-project-title 1s ease-in-out forwards";
+const moveDownBG = "move-down-project-title 1s ease-in-out forwards";
 
-const distance = window.scrollY;
+// const distance = window.scrollY;
 
 
 // slide function takes the current scroll value (position on page) and the element targeted, 
 // and adds an animation
 
-// const slide = (scrollValue, el, animationName) => {
-//     if(distance >= scrollValue){
-//         el.forEach(element => {
-//             element.style.animation = animationName;
-//         });
-//     }
-// }
+slide = (scrollValue, element, animationOne, animationTwo) => {
+    const distance = window.scrollY;
+    if(distance >= scrollValue){
+            element.style.animation = animationOne;
+        } else {
+            element.style.animation = animationTwo;
+    }
+}
 
-
-const moveRight = (scrollValue, el) => {
+const slide2 = (scrollValue, el, animationOne, animationTwo) => {
     const distance = window.scrollY;
     if(distance >= scrollValue){
         el.forEach(element => {
-            element.style.animation = rightAnimation;
-        });
-    }
-}
-
-const moveRightTwo = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance <= scrollValue){
+            element.style.animation = animationOne;
+        }); 
+    } else {
         el.forEach(element => {
-            element.style.animation = rightAnimation2;
-        });
-    }
-}
-
-const moveLeft = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance <= scrollValue){
-        el.forEach(element => {
-            element.style.animation = leftAnimation;
-        });
-    }
-}
-
-const moveLeftTwo = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance >= scrollValue){
-        el.forEach(element => {
-            element.style.animation = leftAnimation2;
-        });
-    }
-}
-
-const moveLeftBGElement = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance >= scrollValue){
-            el.style.animation = leftAnimation2;
-    }
-}
-
-const moveRightBGElement = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance <= scrollValue){
-            el.style.animation = rightAnimation2;
-    }
-}
-
-const moveRightMountains = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance >= scrollValue){
-            el.style.animation = moveRightBG;
-    }
-}
-
-const moveUpProjectTitle = (scrollValue, el) => {
-    const distance = window.scrollY;
-    if(distance >= scrollValue){
-            el.style.animation = moveUpBG;
+            element.style.animation = animationTwo;
+        }); 
     }
 }
 
 
-//parallax animation for "Projects" heading and Mountains SVG
+
+
+//parallax slide animation for elements on page
 
 window.addEventListener("scroll", function() {
-    // const distance = window.scrollY;
-    // console.log(distance);
-    // if(distance < 1115){
-    //     projects.style.transform = `translateY(${distance *
-    //     -.7}px)`;
-    //     projectTitleWrapper.style.transform = `translateY(${distance * -1}px)`;
-    // }
-    // else if(distance < 1200){
-    //     mountains.style.transform = `translateX(${distance *
-    //     -1.5}px)`;
-    // }
-// slide in projects on scroll
-    moveUpProjectTitle(801, projects);
-    moveRightMountains(801, mountains);
-    moveLeftBGElement(801, aboutTitle);
-    moveRightBGElement(800, aboutTitle);   
-    moveRight(2361, awesomeCo);
-    moveLeft(2360, awesomeCo);
-    moveLeftTwo(2851, drumSpace);
-    moveRightTwo(2850, drumSpace);
+
+    const mobile = 575;
+    const tabletOrLarger = 900;
+
+    // slide in projects on scroll
+    if (window.innerWidth <= mobile) {
+        slide(201, aboutTitle, leftAnimation2, rightAnimation2);
+        slide(2100, projects, moveUpBG, moveDownBG);
+        slide(2100, mountains, moveRightBG, moveLeftBG);    
+        slide2(2600, awesomeCo, rightAnimation, leftAnimation);
+        slide2(3250, drumSpace, leftAnimation2, rightAnimation2);
+        slide2(3650, dataAnalytics, rightAnimation, leftAnimation);
+        slide2(4050, styleGuide, leftAnimation2, rightAnimation2);
+    } else if (window.innerWidth >= tabletOrLarger) {
+        slide(201, aboutTitle, leftAnimation2, rightAnimation2);
+        slide(2200, projects, moveUpBG, moveDownBG);
+        slide(2200, mountains, moveRightBG, moveLeftBG);    
+        slide2(2300, awesomeCo, rightAnimation, leftAnimation);
+        slide2(2900, drumSpace, leftAnimation2, rightAnimation2);
+        slide2(3200, dataAnalytics, rightAnimation, leftAnimation);
+        slide2(3650, styleGuide, leftAnimation2, rightAnimation2);
+    } 
 });
 

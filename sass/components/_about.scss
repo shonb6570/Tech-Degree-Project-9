@@ -1,13 +1,33 @@
 #about {
-    margin-top: 1080px;
     z-index: 1;
+    max-width: 500px;
+    margin-bottom: -850px !important;
+    @include for-size(tablet){
+        max-width: 650px;
+        }
+    @include for-size(desktop){
+        max-width: 1000px;
+        }
+    
 }
 
-.about-title {
+#aboutTitle {
     transform: translateX(-200%);
 }
 
+
+#shaunPortraitWrapper{
+    max-width: 700px;
+    @include for-size(tablet){
+        max-width: 400px;
+        }
+}
 #shaunPortrait{
     max-height: 500px;
+    margin-bottom: 40px;
+    @include for-size(tablet){
+    max-height: 400px;
+    margin-bottom: 0;
+    }
 }
 

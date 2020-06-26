@@ -1,69 +1,9 @@
-/* --------------------------------
-        Keyframes
----------------------------------*/
-@keyframes fadein {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-/* --------------------------------
-       BG video styles
----------------------------------*/
-.paused {
-  display: none;
-}
-
-#bgVideo {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 980px;
-}
-
-.video {
-  position: relative;
-  height: 980px;
-  min-width: 100%;
-  min-height: 100%;
-  top: 45%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  animation: fadein 2s;
-  z-index: -1;
-}
-@media (min-width: 1200px) {
-  .video {
-    max-width: 1580px;
-  }
-}
-
-body {
-  background-color: black;
-  overflow-x: hidden;
-  height: 3000px;
-  z-index: -1;
-}
-
-.nav {
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
-.affix {
-  top: 0;
-  position: fixed;
-}
-
-hr {
-  height: 5px;
-  width: 50%;
-  color: white;
-  z-index: 3;
-}
-
+/* ============================================= */
+/*         Descriptive colors                    */
+/* ============================================= */
+/* ============================================= */
+/*         Base style colors                     */
+/* ============================================= */
 @font-face {
   font-family: "roadway";
   src: url("../fonts/roadway/ROADWAY_.woff") format("woff");
@@ -85,6 +25,15 @@ hr {
   src: url("../fonts/coolvetica/Coolvetica.otf") format("otf");
 }
 .nav-link,
+.h1,
+#phrase span,
+#aboutHeadline,
+.title,
+.about-me-copy {
+  color: white;
+}
+
+.nav-link,
 .h1 {
   font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
 }
@@ -93,8 +42,20 @@ hr {
   font-family: "Assassin", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-#aboutTitle {
+.headline {
   font-family: "Heaters", Arial, Helvetica, sans-serif;
+  font-size: 160pt;
+  color: rgba(255, 255, 255, 0.692);
+}
+
+.title,
+.sub-heading,
+.copy,
+#aboutHeadline {
+  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+}
+
+#aboutTitle {
   font-size: 160pt;
   margin-left: -20px;
 }
@@ -105,35 +66,43 @@ hr {
   }
 }
 
-.title {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+#aboutHeadline {
+  max-width: 800px;
+  margin-top: -3rem;
   font-size: 36pt;
+}
+@media (min-width: 1200px) {
+  #aboutHeadline {
+    padding-left: 60px;
+    font-size: 42pt;
+  }
+}
+
+.title {
+  font-size: 36pt;
+  color: #e4e4e4;
 }
 
 .sub-heading {
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
   font-size: 26pt;
 }
 
 .copy {
-  font-size: 18pt;
-  font-family: "Coolvetica", Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+}
+@media (min-width: 600px) {
+  .copy {
+    font-size: 14pt;
+  }
 }
 
 .about-me-bold {
   font-size: 42pt;
 }
-
-.nav-link,
-.h1,
-#phrase span,
-.title,
-.about-me-copy {
-  color: white;
-}
-
-#aboutTitle {
-  color: rgba(255, 255, 255, 0.692);
+@media (min-width: 1200px) {
+  .about-me-bold {
+    font-size: 46pt;
+  }
 }
 
 .about-me {
@@ -273,6 +242,136 @@ hr {
   }
 }
 
+.badges {
+  background-color: #03C1FC;
+  color: #4b4b4b;
+  font-size: 16pt;
+}
+
+/* ============================================= */
+/*          Project logos SVG styles                 */
+/* ============================================= */
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fillStroke {
+  100% {
+    fill: white;
+  }
+}
+@keyframes fillPath {
+  100% {
+    fill: #D00005;
+  }
+}
+#logo {
+  height: 150px;
+  width: 350px;
+}
+
+#logoFill {
+  fill: #D00005;
+  stroke: #D00005;
+  animation: fillPath 1.5s 1.2s forwards;
+}
+
+.logo-stroke {
+  stroke: white;
+  stroke-width: 1;
+  stroke-dasharray: 325;
+  stroke-dashoffset: 325;
+  animation: offset 3s linear forwards, fillStroke 1.2s 3s forwards;
+}
+
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+@keyframes fill-drumSpace {
+  100% {
+    fill: #ffc600;
+  }
+}
+/* ============================================= */
+/*          Main logo                            */
+/* ============================================= */
+#drumSpaceLogo {
+  height: 200px;
+  width: 450px;
+}
+
+#drumSpaceLogo path {
+  stroke: #ffc600;
+  stroke-width: 0.25;
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: offset 4s linear forwards, fill-drumSpace 0.8s 4s forwards;
+}
+
+/* --------------------------------
+        Keyframes
+---------------------------------*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* --------------------------------
+       BG video styles
+---------------------------------*/
+.paused {
+  display: none;
+}
+
+#bgVideo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 980px;
+}
+
+.video {
+  position: relative;
+  height: 980px;
+  min-width: 100%;
+  min-height: 100%;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadein 2s;
+  z-index: -1;
+}
+@media (min-width: 1200px) {
+  .video {
+    max-width: 1580px;
+  }
+}
+
+body {
+  background-color: black;
+  overflow-x: hidden;
+  height: 3000px;
+  z-index: -1;
+}
+
+.nav {
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.affix {
+  top: 0;
+  position: fixed;
+}
+
+.margin {
+  height: 940px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -326,7 +425,15 @@ hr {
     transform: translateX(-28%);
   }
   to {
-    transform: none;
+    transform: translateX(-8%);
+  }
+}
+@keyframes move-left-mountains {
+  from {
+    transform: translateX(-8%);
+  }
+  to {
+    transform: translateX(-28%);
   }
 }
 @keyframes move-up-project-title {
@@ -334,39 +441,53 @@ hr {
     transform: none;
   }
   to {
-    transform: translateY(-100%);
+    transform: translateY(-80%);
+  }
+}
+@keyframes move-down-project-title {
+  from {
+    transform: translateY(-80%);
+  }
+  to {
+    transform: none;
   }
 }
 #projectsSectionContainer {
-  margin-top: 2000px;
-  height: 729px;
-  background: linear-gradient(#000, #fcba2b);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  height: 1329px;
+  background: linear-gradient(#000, rgba(252, 186, 43, 0.475), rgba(252, 186, 43, 0.735), #000);
   overflow: hidden;
   z-index: -4;
 }
 @media (min-width: 600px) {
   #projectsSectionContainer {
-    margin-top: 1800px;
+    height: 900px;
+  }
+}
+@media (min-width: 1200px) {
+  #projectsSectionContainer {
+    height: 800px;
   }
 }
 
 #projects {
-  margin-top: 680px;
+  margin-top: 1100px;
   height: 200px;
   width: 80%;
   position: absolute;
-  left: 10%;
-  z-index: -1;
+  left: 15%;
+  z-index: 1;
+}
+@media (min-width: 600px) {
+  #projects {
+    margin-top: 700px;
+    width: 70%;
+  }
 }
 @media (min-width: 1200px) {
   #projects {
-    height: 200px;
-    width: 50%;
-    left: 25%;
+    margin-top: 580px;
+    width: 40%;
+    left: 35%;
   }
 }
 
@@ -374,11 +495,19 @@ hr {
   height: 250px;
   transform: translateX(-28%);
   position: relative;
-  margin-top: 480px;
+  margin-top: 1080px;
+  z-index: 2;
+}
+@media (min-width: 600px) {
+  #mountains {
+    margin-top: 651px;
+    left: 20%;
+  }
 }
 @media (min-width: 1200px) {
   #mountains {
     left: 40%;
+    margin-top: 550px;
   }
 }
 
@@ -389,12 +518,19 @@ hr {
 .gif {
   border: 1px solid white;
   border-radius: 5px;
+  background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
   width: 100%;
   min-height: 300px;
+  padding: 0 10px;
+}
+@media (min-width: 1200px) {
+  .gif {
+    width: 70%;
+  }
 }
 
 #projectExamples {
-  margin-top: 600px;
+  margin-top: 5rem;
   width: 100%;
   height: 400px;
 }
@@ -416,40 +552,120 @@ hr {
   }
 }
 
-.awesomeCo {
+.left {
   transform: translateX(-200%);
 }
 
-.drumSpace {
+.right {
   transform: translateX(200%);
 }
 
+.projectBG {
+  background: linear-gradient(#000, rgba(255, 255, 255, 0.359), rgba(255, 255, 255, 0.201), #000);
+  z-index: -3;
+}
+@media (min-width: 600px) {
+  .projectBG {
+    background: none;
+  }
+}
+
 #awesomeCoCopy:after,
-#drumSpaceCopy:after {
+#drumSpaceCopy:after,
+#dataAnalyticsCopy:after,
+#styleGuideCopy:after {
   content: "";
   position: absolute;
-  top: 24%;
-  left: 27%;
+  top: 16%;
   width: 180%;
-  height: 87%;
-  background: linear-gradient(to right, rgba(252, 186, 43, 0.7), #000, #000);
-  -webkit-transform: skew(-30deg);
-  -ms-transform: skew(-30deg);
-  transform: skew(-30deg);
+  height: 80%;
+  background: linear-gradient(to right, #00e8f9, #000, #000);
+  -webkit-transform: skew(-11deg);
+  -ms-transform: skew(-11deg);
+  transform: skew(-11deg);
   z-index: -1;
+}
+@media (min-width: 600px) {
+  #awesomeCoCopy:after,
+#drumSpaceCopy:after,
+#dataAnalyticsCopy:after,
+#styleGuideCopy:after {
+    background: linear-gradient(to right, rgba(0, 249, 249, 0.578), #000, #000);
+  }
+}
+
+#awesomeCoCopy:after,
+#drumSpaceCopy:after,
+#dataAnalyticsCopy:after {
+  -webkit-transform: skew(-11deg);
+  -ms-transform: skew(-11deg);
+  transform: skew(-11deg);
+}
+
+#styleGuideCopy:after {
+  -webkit-transform: skew(-11deg);
+  -ms-transform: skew(-11deg);
+  transform: skew(11deg);
+}
+
+#awesomeCoCopy:after {
+  left: 84.5%;
+}
+
+#drumSpaceCopy:after {
+  left: 67.5%;
+}
+
+#dataAnalyticsCopy:after {
+  left: 32%;
+}
+
+#styleGuideCopy:after {
+  left: 32%;
 }
 
 #about {
-  margin-top: 1080px;
   z-index: 1;
+  max-width: 500px;
+  margin-bottom: -850px !important;
+}
+@media (min-width: 600px) {
+  #about {
+    max-width: 650px;
+  }
+}
+@media (min-width: 1200px) {
+  #about {
+    max-width: 1000px;
+  }
 }
 
-.about-title {
+#aboutTitle {
   transform: translateX(-200%);
+}
+
+#shaunPortraitWrapper {
+  max-width: 700px;
+}
+@media (min-width: 600px) {
+  #shaunPortraitWrapper {
+    max-width: 400px;
+  }
 }
 
 #shaunPortrait {
   max-height: 500px;
+  margin-bottom: 40px;
+}
+@media (min-width: 600px) {
+  #shaunPortrait {
+    max-height: 400px;
+    margin-bottom: 0;
+  }
+}
+
+#contact {
+  margin-top: 5300px;
 }
 
 /*# sourceMappingURL=styles.css.map */
