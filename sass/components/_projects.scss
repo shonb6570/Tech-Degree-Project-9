@@ -156,7 +156,7 @@
     border-radius: 5px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
     width: 100%;
-    min-height: 300px;
+    height: 400px;
     padding: 0 10px;
     @include for-size(desktop){
         width: 70%;

@@ -62,9 +62,8 @@
 
 
 /* ============================================= */
-/*          Main logo                            */
+/*          drumspace logo                            */
 /* ============================================= */
-
 
 #drumSpaceLogo {
     height: 200px;
@@ -77,4 +76,25 @@
     stroke-dasharray: 295;
     stroke-dashoffset: 295;
     animation: offset 4s linear forwards, fill-drumSpace .8s 4s forwards;
+}
+
+
+#circlesLogo {
+    height: 150px;
+    padding-left: 20px;
+}
+
+.circles-Logo-Font {
+    fill: $circles-logo-primary;
+    stroke: $circles-logo-primary-darker;
+}
+
+#fsc2020logo{
+    width: 80%;
+    @include for-size(desktop){
+        width: 100%;
+    }
+    @include for-size(desktop){
+        width: 60%;
+    }
 }

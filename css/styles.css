@@ -294,7 +294,7 @@
   }
 }
 /* ============================================= */
-/*          Main logo                            */
+/*          drumspace logo                            */
 /* ============================================= */
 #drumSpaceLogo {
   height: 200px;
@@ -307,6 +307,30 @@
   stroke-dasharray: 295;
   stroke-dashoffset: 295;
   animation: offset 4s linear forwards, fill-drumSpace 0.8s 4s forwards;
+}
+
+#circlesLogo {
+  height: 150px;
+  padding-left: 20px;
+}
+
+.circles-Logo-Font {
+  fill: #f74646;
+  stroke: #cd3a3a;
+}
+
+#fsc2020logo {
+  width: 80%;
+}
+@media (min-width: 1200px) {
+  #fsc2020logo {
+    width: 100%;
+  }
+}
+@media (min-width: 1200px) {
+  #fsc2020logo {
+    width: 60%;
+  }
 }
 
 /* --------------------------------
@@ -520,7 +544,7 @@ body {
   border-radius: 5px;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
   width: 100%;
-  min-height: 300px;
+  height: 400px;
   padding: 0 10px;
 }
 @media (min-width: 1200px) {
@@ -665,7 +689,7 @@ body {
 }
 
 #contact {
-  margin-top: 5300px;
+  margin-top: 3200px;
 }
 
 /*# sourceMappingURL=styles.css.map */
