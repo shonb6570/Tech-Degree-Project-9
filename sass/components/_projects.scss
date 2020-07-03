@@ -160,6 +160,7 @@
     padding: 0 10px;
     @include for-size(desktop){
         width: 70%;
+        margin-left: 150px;
     }
 }
 
@@ -203,16 +204,15 @@
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after,
-#styleGuideCopy:after {
+#styleGuideCopy:after,
+#fsc2020Copy:after,
+#lightBoxCopy:after {
     content: '';
     position: absolute;
     top: 16%;
     width: 180%;
     height: 80%;
     background: linear-gradient(to right, $projects-BG-mobile-color, #000, #000);
-    -webkit-transform: skew(-11deg);
-    -ms-transform: skew(-11deg);
-    transform: skew(-11deg);
     z-index: -1;
     @include for-size(tablet){
         background: linear-gradient(to right, $projects-BG-color, #000, #000);
@@ -221,35 +221,61 @@
 
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
-#dataAnalyticsCopy:after {
-    -webkit-transform: skew(-11deg);
+#dataAnalyticsCopy:after, {
+    -webkit-transform: skew(-1deg);
     -ms-transform: skew(-11deg);
-    transform: skew(-11deg);
+    transform: skew(-14deg);
 }
 
 // chevron slanting left
-#styleGuideCopy:after {
-    -webkit-transform: skew(-11deg);
-    -ms-transform: skew(-11deg);
+#styleGuideCopy:after,
+#fsc2020Copy:after,
+#lightBoxCopy:after  {
+    -webkit-transform: skew(11deg);
+    -ms-transform: skew(11deg);
     transform: skew(11deg);
 }
 
 #awesomeCoCopy:after {
-    left: 84.5%;
+    left: 410px;
 }
 
 #drumSpaceCopy:after {
-    left: 67.5%;
+    left: 240px;
+    @include for-size(desktop){
+        left: 300px;
+    }
 }
 
 #dataAnalyticsCopy:after {
-    left: 32%;
+    left: 60px;
+    @include for-size(desktop){
+        left: 190px;
+    }
 }
 
 // chevron slanting right
 #styleGuideCopy:after {
-    left: 32%;
+    left: 60px;
+    @include for-size(desktop){
+        left: 190px;
+    }
 }
+
+#fsc2020Copy:after {
+    left: 240px;
+    @include for-size(desktop){
+        left: 300px;
+    }
+}
+
+#lightBoxCopy:after {
+    left: 410px;
+    @include for-size(desktop){
+        left: 390px;
+    }
+}
+
 
 
 

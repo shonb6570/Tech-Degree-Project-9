@@ -80,6 +80,7 @@
 
 
 #circlesLogo {
+    margin-top: 20px;
     height: 150px;
     padding-left: 20px;
 }
@@ -91,6 +92,7 @@
 
 #fsc2020logo{
     width: 80%;
+    margin-top: 20px;
     @include for-size(desktop){
         width: 100%;
     }

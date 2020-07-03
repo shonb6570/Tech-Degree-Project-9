@@ -1,3 +1,12 @@
 #contact{
-    margin-top: 3200px;
+    margin-top: 5200px;
+    @include for-size(desktop){
+        margin-top: 2400px;
+    }
+}
+
+.contact-info {
+    @include for-size(desktop){
+        width: 40%
+    }
 }

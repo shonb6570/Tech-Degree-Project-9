@@ -310,6 +310,7 @@
 }
 
 #circlesLogo {
+  margin-top: 20px;
   height: 150px;
   padding-left: 20px;
 }
@@ -321,6 +322,7 @@
 
 #fsc2020logo {
   width: 80%;
+  margin-top: 20px;
 }
 @media (min-width: 1200px) {
   #fsc2020logo {
@@ -550,6 +552,7 @@ body {
 @media (min-width: 1200px) {
   .gif {
     width: 70%;
+    margin-left: 150px;
   }
 }
 
@@ -597,23 +600,24 @@ body {
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after,
-#styleGuideCopy:after {
+#styleGuideCopy:after,
+#fsc2020Copy:after,
+#lightBoxCopy:after {
   content: "";
   position: absolute;
   top: 16%;
   width: 180%;
   height: 80%;
   background: linear-gradient(to right, #00e8f9, #000, #000);
-  -webkit-transform: skew(-11deg);
-  -ms-transform: skew(-11deg);
-  transform: skew(-11deg);
   z-index: -1;
 }
 @media (min-width: 600px) {
   #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after,
-#styleGuideCopy:after {
+#styleGuideCopy:after,
+#fsc2020Copy:after,
+#lightBoxCopy:after {
     background: linear-gradient(to right, rgba(0, 249, 249, 0.578), #000, #000);
   }
 }
@@ -621,31 +625,66 @@ body {
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after {
-  -webkit-transform: skew(-11deg);
+  -webkit-transform: skew(-1deg);
   -ms-transform: skew(-11deg);
-  transform: skew(-11deg);
+  transform: skew(-14deg);
 }
 
-#styleGuideCopy:after {
-  -webkit-transform: skew(-11deg);
-  -ms-transform: skew(-11deg);
+#styleGuideCopy:after,
+#fsc2020Copy:after,
+#lightBoxCopy:after {
+  -webkit-transform: skew(11deg);
+  -ms-transform: skew(11deg);
   transform: skew(11deg);
 }
 
 #awesomeCoCopy:after {
-  left: 84.5%;
+  left: 410px;
 }
 
 #drumSpaceCopy:after {
-  left: 67.5%;
+  left: 240px;
+}
+@media (min-width: 1200px) {
+  #drumSpaceCopy:after {
+    left: 300px;
+  }
 }
 
 #dataAnalyticsCopy:after {
-  left: 32%;
+  left: 60px;
+}
+@media (min-width: 1200px) {
+  #dataAnalyticsCopy:after {
+    left: 190px;
+  }
 }
 
 #styleGuideCopy:after {
-  left: 32%;
+  left: 60px;
+}
+@media (min-width: 1200px) {
+  #styleGuideCopy:after {
+    left: 190px;
+  }
+}
+
+#fsc2020Copy:after {
+  left: 240px;
+}
+@media (min-width: 1200px) {
+  #fsc2020Copy:after {
+    left: 300px;
+  }
+}
+
+#lightBoxCopy:after {
+  left: 410px;
+}
+@media (min-width: 1200px) {
+  #lightBoxCopy:after {
+    left: 390px;
+  }
 }
 
 #about {
@@ -689,7 +728,18 @@ body {
 }
 
 #contact {
-  margin-top: 3200px;
+  margin-top: 5200px;
+}
+@media (min-width: 1200px) {
+  #contact {
+    margin-top: 2400px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .contact-info {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
