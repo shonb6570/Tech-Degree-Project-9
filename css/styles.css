@@ -24,6 +24,7 @@
   font-family: "Coolvetica";
   src: url("../fonts/coolvetica/Coolvetica.otf") format("otf");
 }
+#nav-brand,
 .nav-link,
 .h1,
 #phrase span,
@@ -33,6 +34,7 @@
   color: white;
 }
 
+#nav-brand,
 .nav-link,
 .h1 {
   font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
@@ -42,10 +44,21 @@
   font-family: "Assassin", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
+#nav-brand {
+  font-size: 18pt;
+  opacity: 0;
+}
+
 .headline {
   font-family: "Heaters", Arial, Helvetica, sans-serif;
-  font-size: 160pt;
+  font-size: 140pt;
   color: rgba(255, 255, 255, 0.692);
+}
+@media (min-width: 600px) {
+  .headline {
+    font-size: 160pt;
+    margin-left: 0;
+  }
 }
 
 .title,
@@ -114,8 +127,24 @@
   font-size: 24px;
 }
 
+.contactCopy {
+  font-size: 22pt;
+}
+
+hr {
+  border: 0;
+  clear: both;
+  display: block;
+  width: 93%;
+  background-color: rgba(252, 186, 43, 0.8);
+  height: 1px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+
 .navigation {
   z-index: 3;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .main-heading {
@@ -378,6 +407,22 @@
   }
 }
 
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hide {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
 body {
   background-color: black;
   overflow-x: hidden;
@@ -390,8 +435,7 @@ body {
 }
 
 .affix {
-  top: 0;
-  position: fixed;
+  position: sticky;
 }
 
 .margin {
@@ -736,10 +780,35 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 600px) {
   .contact-info {
-    width: 40%;
+    width: 600px;
   }
+}
+
+.contactForm {
+  background-color: rgba(200, 200, 200, 0.2);
+  color: white;
+}
+
+.form-label {
+  color: #FCBA2B;
+}
+
+#emailLink {
+  color: #FCBA2B;
+}
+
+#submitBtn {
+  background-color: transparent;
+  border-color: rgba(252, 186, 43, 0.8);
+  color: white;
+  width: 100%;
+  height: 50px;
+}
+
+#submitBtn:hover {
+  background-color: #FCBA2B;
 }
 
 /*# sourceMappingURL=styles.css.map */

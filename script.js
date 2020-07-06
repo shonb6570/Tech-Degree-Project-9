@@ -7,6 +7,8 @@ const vid3 = document.getElementById("vid3");
 
             // quote element
 const phrase = document.getElementById('phrase');
+            // nav brand
+const navBrand = document.getElementById("nav-brand");
 
             // projects section elements
 const aboutTitle = document.getElementById('aboutTitle');
@@ -19,6 +21,9 @@ const awesomeCo = document.querySelectorAll(".awesomeCo");
 const drumSpace = document.querySelectorAll(".drumSpace");
 const dataAnalytics = document.querySelectorAll(".dataAnalytics");
 const styleGuide = document.querySelectorAll(".styleGuide");
+const fsc2020 = document.querySelectorAll(".fsc2020");
+const lightBox = document.querySelectorAll(".lightBox");
+
 
 
 /**
@@ -104,6 +109,8 @@ const moveRightBG = "move-right-mountains 1.5s ease-in-out forwards";
 const moveLeftBG = "move-left-mountains 1.5s ease-in-out forwards";
 const moveUpBG = "move-up-project-title 1s ease-in-out forwards";
 const moveDownBG = "move-down-project-title 1s ease-in-out forwards";
+const appear = "appear 1s ease-in-out forwards";
+const hide = "hide .1s ease-in-out forwards";
 
 // const distance = window.scrollY;
 
@@ -111,7 +118,7 @@ const moveDownBG = "move-down-project-title 1s ease-in-out forwards";
 // slide function takes the current scroll value (position on page) and the element targeted, 
 // and adds an animation
 
-slide = (scrollValue, element, animationOne, animationTwo) => {
+const animate = (scrollValue, element, animationOne, animationTwo) => {
     const distance = window.scrollY;
     if(distance >= scrollValue){
             element.style.animation = animationOne;
@@ -120,7 +127,7 @@ slide = (scrollValue, element, animationOne, animationTwo) => {
     }
 }
 
-const slide2 = (scrollValue, el, animationOne, animationTwo) => {
+const animate2 = (scrollValue, el, animationOne, animationTwo) => {
     const distance = window.scrollY;
     if(distance >= scrollValue){
         el.forEach(element => {
@@ -136,30 +143,35 @@ const slide2 = (scrollValue, el, animationOne, animationTwo) => {
 
 
 
+
 //parallax slide animation for elements on page
 
 window.addEventListener("scroll", function() {
 
     const mobile = 575;
     const tabletOrLarger = 900;
+    animate(201, aboutTitle, leftAnimation2, rightAnimation2);
+    animate(950, navBrand, appear, hide);
 
     // slide in projects on scroll
     if (window.innerWidth <= mobile) {
-        slide(201, aboutTitle, leftAnimation2, rightAnimation2);
-        slide(2100, projects, moveUpBG, moveDownBG);
-        slide(2100, mountains, moveRightBG, moveLeftBG);    
-        slide2(2600, awesomeCo, rightAnimation, leftAnimation);
-        slide2(3250, drumSpace, leftAnimation2, rightAnimation2);
-        slide2(3650, dataAnalytics, rightAnimation, leftAnimation);
-        slide2(4050, styleGuide, leftAnimation2, rightAnimation2);
+        animate(2100, projects, moveUpBG, moveDownBG);
+        animate(2100, mountains, moveRightBG, moveLeftBG);    
+        animate2(2600, awesomeCo, rightAnimation, leftAnimation);
+        animate2(3250, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(4250, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(4850, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(6050, fsc2020, rightAnimation, leftAnimation);
+        animate2(6650, lightBox, leftAnimation2, rightAnimation2);
     } else if (window.innerWidth >= tabletOrLarger) {
-        slide(201, aboutTitle, leftAnimation2, rightAnimation2);
-        slide(2200, projects, moveUpBG, moveDownBG);
-        slide(2200, mountains, moveRightBG, moveLeftBG);    
-        slide2(2300, awesomeCo, rightAnimation, leftAnimation);
-        slide2(2900, drumSpace, leftAnimation2, rightAnimation2);
-        slide2(3200, dataAnalytics, rightAnimation, leftAnimation);
-        slide2(3650, styleGuide, leftAnimation2, rightAnimation2);
+        animate(2200, projects, moveUpBG, moveDownBG);
+        animate(2200, mountains, moveRightBG, moveLeftBG);    
+        animate2(2300, awesomeCo, rightAnimation, leftAnimation);
+        animate2(3000, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(3700, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(4100, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(4600, fsc2020, rightAnimation, leftAnimation);
+        animate2(5100, lightBox, leftAnimation2, rightAnimation2);
     } 
 });
 

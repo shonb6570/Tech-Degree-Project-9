@@ -1,4 +1,24 @@
 
+@keyframes appear {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+
+@keyframes hide {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 0;
+    }
+}
+
+
 
 body {
     background-color: black; 
@@ -11,9 +31,13 @@ body {
     background-color: rgba(0, 0, 0, .4);
 }
 
+// .affix {
+//     top:0;
+//     position:fixed;
+// }
+
 .affix {
-    top:0;
-    position:fixed;
+    position:sticky;
 }
 
 // element to keep normal page flow - the BG video element is out of normal page flow

@@ -26,6 +26,7 @@
 
 // Fonts
 
+#nav-brand,
 .nav-link,
 .h1,
 #phrase span,
@@ -35,6 +36,7 @@
     color: white;
 }
 
+#nav-brand,
 .nav-link,
 .h1 {
     font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
@@ -44,11 +46,20 @@
     font-family: "Assassin", 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+#nav-brand{
+    font-size: 18pt;
+    opacity: 0;
+}
+
 
 .headline {
     font-family: "Heaters", Arial, Helvetica, sans-serif;
-    font-size: 160pt;
+    font-size: 140pt;
     color: rgba(255, 255, 255, 0.692);
+    @include for-size(tablet){
+        font-size: 160pt;
+        margin-left: 0;
+    }
 }
 
 .title,
@@ -112,10 +123,26 @@
     font-size: 24px;
 }
 
+.contactCopy {
+    font-size: 22pt;
+}
+
+hr {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 93%;               
+    background-color:$lightning-yellow-lighter;
+    height: 1px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+
 //navs
 
 .navigation {
     z-index: 3;
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .main-heading {
