@@ -149,9 +149,14 @@ hr {
 
 .main-heading {
   position: absolute;
-  top: 88%;
+  top: 8.7%;
   height: 7rem;
   background-color: rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 600px) {
+  .main-heading {
+    top: 11%;
+  }
 }
 
 .h1 {
@@ -176,7 +181,7 @@ hr {
 #phrase {
   position: absolute;
   max-width: 600px;
-  top: 62%;
+  top: 6%;
   font-size: 28px;
   display: inline-block;
   padding: 1em 5em 1em 1em;
@@ -191,7 +196,7 @@ hr {
 }
 @media (min-width: 1200px) {
   #phrase {
-    top: 20%;
+    top: 8%;
     left: 65%;
     font-size: 36px;
     height: 200px;
@@ -425,21 +430,35 @@ hr {
 }
 body {
   background-color: black;
-  overflow-x: hidden;
-  height: 3000px;
+  height: 100%;
   z-index: -1;
+}
+
+.wrapper {
+  position: relative;
+  overflow-x: hidden;
 }
 
 .nav {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-.affix {
-  position: sticky;
-}
-
 .margin {
   height: 940px;
+}
+
+.spacer {
+  margin-top: 5000px;
+}
+@media (min-width: 600px) {
+  .spacer {
+    margin-top: 3600px;
+  }
+}
+@media (min-width: 600px) {
+  .spacer {
+    margin-top: 2600px;
+  }
 }
 
 @keyframes fadeIn {
@@ -768,15 +787,6 @@ body {
   #shaunPortrait {
     max-height: 400px;
     margin-bottom: 0;
-  }
-}
-
-#contact {
-  margin-top: 5200px;
-}
-@media (min-width: 1200px) {
-  #contact {
-    margin-top: 2400px;
   }
 }
 

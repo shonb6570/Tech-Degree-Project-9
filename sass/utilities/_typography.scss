@@ -147,9 +147,12 @@ hr {
 
 .main-heading {
     position: absolute;
-    top: 88%;
+    top: 8.7%;
     height: 7rem;
     background-color: rgba(0, 0, 0, .6);
+    @include for-size(tablet){
+        top: 11%;
+    }
 }
 
 .h1 {
@@ -171,7 +174,7 @@ hr {
 #phrase {
     position: absolute;
     max-width: 600px;
-    top: 62%;
+    top: 6%;
     font-size: 28px;
     display: inline-block;
     padding: 1em 5em 1em 1em;
@@ -184,7 +187,7 @@ hr {
     }
 
     @include for-size(desktop){
-        top: 20%;
+        top: 8%;
         left: 65%;
         font-size: 36px;
         height: 200px;

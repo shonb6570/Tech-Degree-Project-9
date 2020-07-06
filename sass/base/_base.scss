@@ -22,25 +22,32 @@
 
 body {
     background-color: black; 
-    overflow-x: hidden;
-    height: 3000px;
+    height: 100%;
     z-index: -1;
+}
+
+.wrapper {
+    position: relative;
+    overflow-x: hidden;
 }
 
 .nav {
     background-color: rgba(0, 0, 0, .4);
 }
 
-// .affix {
-//     top:0;
-//     position:fixed;
-// }
-
-.affix {
-    position:sticky;
-}
 
 // element to keep normal page flow - the BG video element is out of normal page flow
 .margin {
     height: 940px;
+}
+
+
+.spacer {
+    margin-top: 5000px;
+    @include for-size(tablet){
+        margin-top: 3600px;
+    }
+    @include for-size(tablet){
+        margin-top: 2600px;
+    }
 }
