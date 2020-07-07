@@ -436,22 +436,6 @@ body {
   height: 940px;
 }
 
-.spacer {
-  height: 200px;
-  margin-top: 5000px;
-}
-@media (min-width: 600px) {
-  .spacer {
-    margin-top: 4700px;
-  }
-}
-@media (min-width: 1200px) {
-  .spacer {
-    height: 5px;
-    margin-top: 2400px;
-  }
-}
-
 @keyframes fadeIn {
   from {
     opacity: 0;
