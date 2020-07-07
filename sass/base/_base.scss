@@ -19,6 +19,7 @@
 }
 
 
+
 body {
     background-color: black; 
     height: 100%;
@@ -38,4 +39,37 @@ body {
 // element to keep normal page flow - the BG video element is out of normal page flow
 .margin {
     height: 940px;
+}
+
+
+.spacer {
+    height:200px;
+    margin-top: 5000px;
+    @include for-size(tablet){
+        margin-top: 4700px;
+    }
+    @include for-size(desktop){
+        height:5px;
+        margin-top: 2400px;
+    }
+
+    // I have tried fixing these media queries with more custom screen sizes.  
+    // Yet this seems to only make it have more of a seisure : )
+
+    // @media only screen and (min-width: 600px) {
+    //     margin-top: 5000px;
+    //   }
+
+    //   @media only screen and (min-width: 667px) {
+    //     margin-top: 4400px;
+    // }
+
+    // @media only screen and (min-width: 710px) {
+    //     margin-top: 4000px;
+    // }
+
+    // @media only screen and (min-width: 1200px){
+    //     margin-top: 2600px;
+    // }
+    
 }
