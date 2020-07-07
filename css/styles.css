@@ -437,6 +437,7 @@ body {
 }
 
 .spacer {
+  height: 200px;
   margin-top: 5000px;
 }
 @media (min-width: 600px) {
@@ -446,7 +447,8 @@ body {
 }
 @media (min-width: 1200px) {
   .spacer {
-    margin-top: 2600px;
+    height: 5px;
+    margin-top: 2400px;
   }
 }
 
