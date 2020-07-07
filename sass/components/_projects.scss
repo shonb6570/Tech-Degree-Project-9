@@ -136,7 +136,7 @@
     }
 }
 
-#mountains {;
+#mountains {
     height: 250px;
     transform: translateX(-28%);
     position: relative;
@@ -236,7 +236,7 @@
 
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
-#dataAnalyticsCopy:after, {
+#dataAnalyticsCopy:after {
     -webkit-transform: skew(-1deg);
     -ms-transform: skew(-11deg);
     transform: skew(-14deg);
