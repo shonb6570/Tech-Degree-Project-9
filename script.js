@@ -149,7 +149,7 @@ const animate2 = (scrollValue, el, animationOne, animationTwo) => {
 window.addEventListener("scroll", function() {
 
     const mobile = 575;
-    const tabletOrLarger = 900;
+    const desktop = 1100;
     animate(201, aboutTitle, leftAnimation2, rightAnimation2);
     animate(950, navBrand, appear, hide);
 
@@ -163,15 +163,24 @@ window.addEventListener("scroll", function() {
         animate2(4850, styleGuide, leftAnimation2, rightAnimation2);
         animate2(6050, fsc2020, rightAnimation, leftAnimation);
         animate2(6650, lightBox, leftAnimation2, rightAnimation2);
-    } else if (window.innerWidth >= tabletOrLarger) {
+    } else if (window.innerWidth > mobile && window.innerWidth < desktop ) {
         animate(2200, projects, moveUpBG, moveDownBG);
         animate(2200, mountains, moveRightBG, moveLeftBG);    
         animate2(2300, awesomeCo, rightAnimation, leftAnimation);
-        animate2(3000, drumSpace, leftAnimation2, rightAnimation2);
-        animate2(3700, dataAnalytics, rightAnimation, leftAnimation);
-        animate2(4100, styleGuide, leftAnimation2, rightAnimation2);
-        animate2(4600, fsc2020, rightAnimation, leftAnimation);
-        animate2(5100, lightBox, leftAnimation2, rightAnimation2);
+        animate2(2900, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(3300, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(3800, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(4200, fsc2020, rightAnimation, leftAnimation);
+        animate2(4800, lightBox, leftAnimation2, rightAnimation2);
+    } else {
+        animate(2200, projects, moveUpBG, moveDownBG);
+        animate(2200, mountains, moveRightBG, moveLeftBG);    
+        animate2(2300, awesomeCo, rightAnimation, leftAnimation);
+        animate2(2600, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(3000, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(3500, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(3900, fsc2020, rightAnimation, leftAnimation);
+        animate2(4500, lightBox, leftAnimation2, rightAnimation2);
     } 
 });
 

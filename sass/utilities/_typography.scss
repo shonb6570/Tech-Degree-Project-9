@@ -147,12 +147,9 @@ hr {
 
 .main-heading {
     position: absolute;
-    top: 8.7%;
+    top: 820px;
     height: 7rem;
     background-color: rgba(0, 0, 0, .6);
-    @include for-size(tablet){
-        top: 11%;
-    }
 }
 
 .h1 {
@@ -173,32 +170,40 @@ hr {
 }
 #phrase {
     position: absolute;
-    max-width: 600px;
-    top: 6%;
+    top: 580px;
+    left:  0;
+    height: 200px;
     font-size: 28px;
     display: inline-block;
     padding: 1em 5em 1em 1em;
     overflow: hidden;
     width: 100%;
 
+    -webkit-transition-property: top left font-size height;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-timing-function: ease-in-out;
+    transition-property: top left font-size height;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;
+
     @include for-size(tablet){
-        left: 40%;
-        max-width: 780px;
+        left: 30%;
+        max-width: 900px;
     }
 
     @include for-size(desktop){
-        top: 8%;
-        left: 65%;
+        top: 300px;
+        left: 55%;
         font-size: 36px;
         height: 200px;
-        max-width: 585px;
 
-        -webkit-transition-property: top left font-size height;
-        -webkit-transition-duration: 1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: top left font-size height;
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
+
+        // -webkit-transition-property: top left font-size height;
+        // -webkit-transition-duration: 1s;
+        // -webkit-transition-timing-function: ease-in-out;
+        // transition-property: top left font-size height;
+        // transition-duration: 1s;
+        // transition-timing-function: ease-in-out;
     }
   }
   
@@ -213,9 +218,9 @@ hr {
     -webkit-transform-origin: 0 100%;
     -ms-transform-origin: 0 100%;
     transform-origin: 0 100%;
-    -webkit-transform: skew(-30deg);
-    -ms-transform: skew(-30deg);
-    transform: skew(-30deg);
+    -webkit-transform: skew(-29deg);
+    -ms-transform: skew(-29deg);
+    transform: skew(-29deg);
     z-index: -1;
 
     -webkit-transition-property: top left width height transform;
@@ -236,16 +241,15 @@ hr {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    width: 100%;
+    width: 106%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
-    -webkit-transform: skew(-30deg);
-    -ms-transform: skew(-30deg);
-    transform: skew(-30deg);
+    -webkit-transform: skew(-29deg);
+    -ms-transform: skew(-29deg);
+    transform: skew(-29deg);
     z-index: -1;
 
     -webkit-transition-property: top left width height transform;
@@ -260,13 +264,7 @@ hr {
         -webkit-transform: skew(-50deg);
         -ms-transform: skew(-50deg);
         transform: skew(-50deg);
-
-        -webkit-transition-property: transform;
-        -webkit-transition-duration: 1s;
-        -webkit-transition-timing-function: ease-in-out;
-        transition-property: transform;
-        transition-duration: 1s;
-        transition-timing-function: ease-in-out;
+        width: 100%;
     }
   }
 
