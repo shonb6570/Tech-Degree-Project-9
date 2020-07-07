@@ -155,8 +155,8 @@ window.addEventListener("scroll", function() {
 
     // slide in projects on scroll
     if (window.innerWidth <= mobile) {
-        animate(2100, projects, moveUpBG, moveDownBG);
-        animate(2100, mountains, moveRightBG, moveLeftBG);    
+        animate(1800, projects, moveUpBG, moveDownBG);
+        animate(1800, mountains, moveRightBG, moveLeftBG);    
         animate2(2600, awesomeCo, rightAnimation, leftAnimation);
         animate2(3250, drumSpace, leftAnimation2, rightAnimation2);
         animate2(4250, dataAnalytics, rightAnimation, leftAnimation);
@@ -164,8 +164,8 @@ window.addEventListener("scroll", function() {
         animate2(6050, fsc2020, rightAnimation, leftAnimation);
         animate2(6650, lightBox, leftAnimation2, rightAnimation2);
     } else if (window.innerWidth > mobile && window.innerWidth < desktop ) {
-        animate(2200, projects, moveUpBG, moveDownBG);
-        animate(2200, mountains, moveRightBG, moveLeftBG);    
+        animate(1800, projects, moveUpBG, moveDownBG);
+        animate(1800, mountains, moveRightBG, moveLeftBG);    
         animate2(2300, awesomeCo, rightAnimation, leftAnimation);
         animate2(2900, drumSpace, leftAnimation2, rightAnimation2);
         animate2(3300, dataAnalytics, rightAnimation, leftAnimation);
@@ -173,8 +173,8 @@ window.addEventListener("scroll", function() {
         animate2(4200, fsc2020, rightAnimation, leftAnimation);
         animate2(4800, lightBox, leftAnimation2, rightAnimation2);
     } else {
-        animate(2200, projects, moveUpBG, moveDownBG);
-        animate(2200, mountains, moveRightBG, moveLeftBG);    
+        animate(1900, projects, moveUpBG, moveDownBG);
+        animate(1900, mountains, moveRightBG, moveLeftBG);    
         animate2(2300, awesomeCo, rightAnimation, leftAnimation);
         animate2(2600, drumSpace, leftAnimation2, rightAnimation2);
         animate2(3000, dataAnalytics, rightAnimation, leftAnimation);

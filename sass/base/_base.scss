@@ -45,9 +45,29 @@ body {
 .spacer {
     margin-top: 5000px;
     @include for-size(tablet){
-        margin-top: 3600px;
+        margin-top: 4700px;
     }
-    @include for-size(tablet){
+    @include for-size(desktop){
         margin-top: 2600px;
     }
+
+    // I have tried fixing these media queries with more custom screen sizes.  
+    // Yet this seems to only make it have more of a seisure : )
+    
+    // @media only screen and (min-width: 600px) {
+    //     margin-top: 5000px;
+    //   }
+
+    //   @media only screen and (min-width: 667px) {
+    //     margin-top: 4400px;
+    // }
+
+    // @media only screen and (min-width: 710px) {
+    //     margin-top: 4000px;
+    // }
+
+    // @media only screen and (min-width: 1200px){
+    //     margin-top: 2600px;
+    // }
+    
 }
