@@ -1,5 +1,37 @@
 
 
+// #contact {
+//     @media only screen and (min-width: 580px) {
+//         margin-top: -200px;
+//       }
+//     @media only screen and (min-width: 650px) {
+//         margin-top: -400px;
+//       }
+//     @media only screen and (min-width: 667px) {
+//         margin-top: -600px;
+//       }
+//     @media only screen and (min-width: 699px) {
+//          margin-top: -950px;
+//     }
+//     @media only screen and (min-width: 710px) {
+//         margin-top: -1000px;
+//     }
+
+//     @media only screen and (min-width: 730px) {
+//         margin-top: -1400px;
+//     }
+
+//     @media only screen and (min-width: 801px) {
+//         margin-top: -1800px;
+//     }
+//     @media only screen and (min-width: 850px) {
+//         margin-top: -2200px;
+//     }
+//     @media only screen and (min-width: 900px) {
+//         margin-top: -2400px;
+//     }
+// }
+
 .contact-info {
     @include for-size(tablet){
         width: 600px
