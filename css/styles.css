@@ -5,24 +5,26 @@
 /*         Base style colors                     */
 /* ============================================= */
 @font-face {
-  font-family: "roadway";
-  src: url("../fonts/roadway/ROADWAY_.woff") format("woff");
-}
-@font-face {
-  font-family: "Dolce Vita Light";
-  src: url("../fonts/dolce_vita/DolceVitaLight.woff") format("woff");
-}
-@font-face {
-  font-family: "Assassin";
-  src: url("../fonts/assassin/Assassin_.woff") format("woff");
-}
-@font-face {
   font-family: "Heaters";
-  src: url("../fonts/heaters/Heaters.otf") format("otf");
+  src: url("../fonts/heaters-webfont.woff2") format("woff2"), url("../fonts/heaters-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Jacob_and_sonitalic";
+  src: url("../fonts/jacobandsonitalic-webfont.woff2") format("woff2"), url("../fonts/jacobandsonitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 @font-face {
   font-family: "Coolvetica";
-  src: url("../fonts/coolvetica/Coolvetica.otf") format("otf");
+  src: url("../fonts/coolvetica-webfont.woff2") format("woff2"), url("../fonts/coolvetica-webfont.woff") format("woff");
+}
+@font-face {
+  font-family: "Dolce Vita Light";
+  src: url("../fonts/dolcevitalight-webfont.woff2") format("woff2"), url("../fonts/dolcevitalight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
 #nav-brand,
 .nav-link,
@@ -41,7 +43,7 @@
 }
 
 #phrase span {
-  font-family: "Assassin", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-family: "Jacob_and_sonitalic", Arial, Helvetica, sans-serif;
 }
 
 #nav-brand {
@@ -177,16 +179,16 @@ hr {
   position: absolute;
   top: 580px;
   left: 0;
-  height: 200px;
-  font-size: 28px;
+  height: 220px;
+  font-size: 30px;
   display: inline-block;
   padding: 1em 5em 1em 1em;
   overflow: hidden;
   width: 100%;
-  -webkit-transition-property: top left font-size height;
+  -webkit-transition-property: top, left, font-size, height;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
-  transition-property: top left font-size height;
+  transition-property: top, left, font-size, height;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 }
@@ -220,10 +222,10 @@ hr {
   -ms-transform: skew(-29deg);
   transform: skew(-29deg);
   z-index: -1;
-  -webkit-transition-property: top left width height transform;
+  -webkit-transition-property: top, left, width, height, transform;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
-  transition-property: top left width height transform;
+  transition-property: top, left, width, height, transform;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 }
@@ -249,10 +251,10 @@ hr {
   -ms-transform: skew(-29deg);
   transform: skew(-29deg);
   z-index: -1;
-  -webkit-transition-property: top left width height transform;
+  -webkit-transition-property: top, left, width, height, transform;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
-  transition-property: top left width height transform;
+  transition-property: top, left, width, height, transform;
   transition-duration: 1s;
   transition-timing-function: ease-in-out;
 }
