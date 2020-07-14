@@ -40,7 +40,8 @@
 #phrase span,
 #aboutHeadline,
 .title,
-.about-me-copy {
+.about-me-copy,
+.project-links {
     color: white;
 }
 
@@ -50,7 +51,8 @@
     font-family: "Dolce Vita Light", Arial, Helvetica, sans-serif;
 }
 
-#phrase span {
+#phrase span,
+.project-links {
     font-family: "Jacob_and_sonitalic", Arial, Helvetica, sans-serif;
 }
 
@@ -135,7 +137,23 @@
     font-size: 22pt;
 }
 
-hr {
+.project-links {
+    font-size: 32px;
+    margin: 0;
+    width: 150px;
+    text-transform: uppercase;
+}
+
+.project-links:hover {
+    color: $lightning-yellow;
+    transition: color .8s ease-in;
+    border-bottom: none;
+  }
+
+
+
+.sectionHR,
+ {
     border: 0;
     clear:both;
     display:block;
@@ -281,4 +299,6 @@ hr {
       color: rgb(75, 75, 75);
       font-size: 16pt;
   }
+
+
 

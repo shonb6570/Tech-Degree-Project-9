@@ -1,0 +1,34 @@
+// ==========================================================================
+// Header styles
+// ==========================================================================
+
+.profile-img {
+    height: 35px;
+    width:  35px;
+    border: solid .25px $border-color-dark;
+    border-radius: 50% 50%;
+    margin: 11.5px 0 11.5px 10px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    background-color: $main-color;
+}
+
+header:first-child {
+    padding-left: 15px;
+}
+
+#user{
+    padding: 0 20px 0 5px;
+}
+
+#header-vertical-line{ 
+    margin: 0 10px;
+    transform: rotate(90deg);
+    color: $cod-grey;
+    height: 0;
+    width: 20%;
+}
+

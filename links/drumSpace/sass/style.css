@@ -1,0 +1,201 @@
+/* ============================================= */
+/*              Descriptive colors               */
+/* ============================================= */
+/* ============================================= */
+/*              Base style colors                */
+/* ============================================= */
+/* ============================================= */
+/*                Font Stacks                    */
+/* ============================================= */
+/* ============================================= */
+/*              Base                             */
+/* ============================================= */
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+#wrapper {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+/* --------------------------------
+        Keyframes
+---------------------------------*/
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* --------------------------------
+       BG video styles
+---------------------------------*/
+.paused {
+  display: none;
+}
+
+#bgVideo {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.video {
+  position: absolute;
+  width: auto;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fadein 2s;
+  z-index: -1;
+}
+
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill-mobile {
+  100% {
+    fill: #FFF;
+  }
+}
+@keyframes fill-desktop {
+  100% {
+    fill: #ffc600;
+  }
+}
+/* ============================================= */
+/*          Main logo                            */
+/* ============================================= */
+#logo {
+  position: absolute;
+  top: 5%;
+  z-index: 5;
+  height: 200px;
+  width: 450px;
+}
+@media (min-width: 1024px) {
+  #logo {
+    top: 0;
+    height: 400px;
+    width: 600px;
+  }
+}
+
+#logo path {
+  stroke: #FFF;
+  stroke-width: 0.25;
+  stroke-dasharray: 295;
+  stroke-dashoffset: 295;
+  animation: offset 4s linear forwards, fill-mobile 0.8s 4s forwards;
+}
+@media (min-width: 1024px) {
+  #logo path {
+    stroke: #ffc600;
+    stroke-width: 0.25;
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+    animation: offset 4s linear forwards, fill-desktop 0.8s 4s forwards;
+  }
+}
+
+.keys {
+  position: absolute;
+  top: 25%;
+  margin: auto auto;
+  background-color: transparent;
+  display: flex;
+  flex-wrap: wrap;
+  height: 3rem;
+  width: 100%;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+@media (min-width: 1024px) {
+  .keys {
+    top: 30%;
+  }
+}
+
+.key {
+  border: 0.2rem solid #00fff2;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.75);
+  margin: 0.6rem;
+  font-size: 0.5rem;
+  font-family: "Poiret One", cursive;
+  padding: 1rem 0.5rem;
+  transition: all 0.07s ease;
+  width: 4.7rem;
+  text-align: center;
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.4);
+  text-shadow: 0 0 0.5rem rgba(255, 255, 255, 0.75);
+}
+@media (min-width: 1024px) {
+  .key {
+    box-shadow: 0 0 1rem;
+    border-color: #ffc600;
+    margin: 0.8rem;
+    font-size: 0.5rem;
+    width: 6rem;
+    background: rgba(0, 0, 0, 0.4);
+    text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
+  }
+}
+
+.playing {
+  transform: scale(1.1);
+  border-color: #ffc600;
+  box-shadow: 0 0 1rem #ffc600;
+}
+@media (min-width: 1024px) {
+  .playing {
+    border-color: #00fff2;
+    box-shadow: 0 0 1rem #00fff2;
+  }
+}
+
+kbd {
+  display: block;
+  font-size: 2.5rem;
+  font-family: "Quicksand", sans-serif;
+}
+@media (min-width: 1024px) {
+  kbd {
+    font-size: 4rem;
+  }
+}
+
+.sound {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #ffc600;
+}
+@media (min-width: 1024px) {
+  .sound {
+    font-size: 1rem;
+    letter-spacing: 0.2rem;
+    color: #ffc600;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

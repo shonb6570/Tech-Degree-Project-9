@@ -1,0 +1,63 @@
+// ==========================================================================
+// SVG styles
+// ==========================================================================
+
+
+
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill-mobile {
+    100% {
+        fill: $logo-alternate-color;
+    }
+}
+
+@keyframes fill-desktop {
+    100% {
+        fill: $logo-main-color;
+    }
+}
+
+/* ============================================= */
+/*          Main logo                            */
+/* ============================================= */
+
+
+#logo {
+    position: absolute;
+    top: 5%;
+    z-index: 5;
+    height: 200px;
+    width: 450px;
+
+    @media (min-width: 1024px) {
+            top: 0;
+            height: 400px;
+            width: 600px;
+    }
+}
+
+#logo path{
+    stroke: $logo-alternate-color;
+    stroke-width: .25;
+    stroke-dasharray: 295;
+    stroke-dashoffset: 295;
+    animation: offset 4s linear forwards, fill-mobile .8s 4s forwards;
+
+    @media (min-width: 1024px) {
+            stroke: $logo-main-color;
+            stroke-width: .25;
+            stroke-dasharray: 295;
+            stroke-dashoffset: 295;
+            animation: offset 4s linear forwards, fill-desktop .8s 4s forwards;
+    }
+}
+

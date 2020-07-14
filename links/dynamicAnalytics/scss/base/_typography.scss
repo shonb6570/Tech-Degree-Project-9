@@ -1,0 +1,119 @@
+// ==========================================================================
+// Main styles
+// ==========================================================================
+
+
+/* ============================================= */
+/*              Base                             */
+/* ============================================= */
+
+body {
+    margin: 0;
+}
+
+#dynamicAnalyticsLogo {
+    color: $company-logo;
+}
+
+#dynamicAnalyticsLogo:hover {
+    color: $company-logo-hover;
+    transition: .5s ease-in;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+a:focus, 
+select, 
+button:focus, 
+.button.alt:focus, 
+input:focus, 
+textarea:focus, 
+input[type="button"]:focus, 
+input[type="reset"]:focus, 
+input[type="submit"]:focus, 
+input[type="search"]:focus {
+    outline-color: $link-hover;
+}
+
+select {
+    height: 50px;
+}
+
+textarea::placeholder {
+    padding-left: 10px;
+}
+
+.next {
+    color: white;
+}
+
+.daily,
+.mobile,
+.members,
+.activity,
+.message,
+.settings {
+    padding: 20px;
+    border-top: 1px solid $wild-dove;
+}
+
+li button {
+    border: none;
+    background-color: transparent;
+}
+
+
+/* ============================================= */
+/*              Typography                       */
+/* ============================================= */
+
+h2, 
+h3, 
+p,
+li,
+select,
+button {
+    color: $font-main-color;
+}
+
+.main-header-search input,
+.main-header h2,
+h3,
+.form-field::placeholder,
+#messageField::placeholder {
+    font-family: $main-font;
+    font-weight: $font-extra-light;
+}
+
+#timezone {
+    font-family: $main-font;
+    font-size: 14.5px;
+}
+
+button {
+    font-family: $main-font;
+    font-weight: $font-bolder;
+    cursor: pointer;
+}
+
+.settings,
+.alert {
+    font-family: $main-font;
+}
+
+.social {
+    font-family: $secondary-font;
+    font-weight: $font-thin;
+}
+
+.members-container {
+    font-family: $secondary-font;
+    font-weight: $font-light;
+}
+
+.settings p {
+    font-weight: $font-bolder;
+}

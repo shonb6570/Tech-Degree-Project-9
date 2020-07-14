@@ -1,0 +1,61 @@
+// ==========================================================================
+// Message
+// ==========================================================================
+
+#userField, 
+#timezone, 
+.button-primary, 
+#cancel {
+    width: 100%;
+    padding: 1em 0;
+    margin-top: .5em;
+    border: 1px solid $wild-dove;
+    border-radius: 5px;
+}
+
+#messageField {
+    width: 98.5%;
+    margin-top: .5em;
+    border: 1px solid $wild-dove;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+#messageField::placeholder {
+    padding-top: 8px;
+    padding-left: 5px;
+}
+ 
+.message {
+    padding-top: 5px;
+    padding-left: 20px;
+    
+    @media (min-width: 1024px) {
+        margin-left: 25%;
+        padding-bottom: 60px;
+        padding: 0 15px;
+    }
+}
+
+.widget-container-half {
+    @media (min-width: 768px) {
+        padding-left: 15px;
+        margin-left: 0;
+    }
+}
+
+.button-primary {
+    @media (min-width: 768px) {
+        width: 49%;
+        margin-right: auto;
+    }
+}
+
+#send {
+    @media (min-width: 768px) {
+        width: 100%;
+    }
+    @media (min-width: 1024px) {
+        margin-top: 20px;
+    }
+}

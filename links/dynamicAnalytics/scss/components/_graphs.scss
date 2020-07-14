@@ -1,0 +1,120 @@
+// ==========================================================================
+// Graphs
+// ==========================================================================
+
+/* ============================================= */
+/*              Traffic                          */
+/* ============================================= */
+
+.traffic  {
+    padding: 20px;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+.traffic-header {
+    display: flex;
+}
+
+.traffic-nav {
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    padding: 0;
+}
+
+.traffic-nav-link {
+    margin: auto 0 auto 5px;
+    list-style-type: none;
+}
+
+.active {
+    background-color: rgb(157, 245, 157);
+    padding: 6px 9px;
+    border-radius: 20px;
+}
+
+.active:hover {
+  color: inherit;
+}
+
+.widget-container-full {
+    @media (min-width: 768px) {
+        width: 90%;
+    }
+    @media (min-width: 1024px) {
+        margin: 0 auto;
+    }
+}
+
+
+#traffic-chart {
+    @media (min-width: 768px) {
+        max-height: 400px !important;
+        max-width: 800px !important;
+    }
+    @media (min-width: 1024px) {
+        margin: 0 auto;
+    }
+}
+
+
+/* ============================================= */
+/*              Daily  & Mobile                  */
+/* ============================================= */
+
+
+.daily, 
+.mobile {
+    @media (min-width: 768px) {
+    border: 1px solid $wild-dove;
+    padding: 10px 5px 20px;
+    }
+}
+
+.daily h3, 
+.mobile h3{
+    @media (min-width: 768px) {
+        padding-left: 20px;
+    }
+}
+
+.daily {
+    @media (min-width: 768px) {
+        border-left: none;
+    }
+    @media (min-width: 1024px) {
+        padding: 0 0 15px 40px;
+        margin-left: auto;
+        width: 75%;
+        border-right: none;
+    }
+}
+.mobile {
+    @media (min-width: 768px) {
+        border-left: none;
+        border-right: none;
+    }
+    @media (min-width: 1024px) {
+        padding: 0 0 15px 0;
+        margin-right: auto;
+        width: 75%;
+    }
+}
+
+
+
+
+.widget-container-half {
+    @media (min-width: 1024px) {
+        padding: 0;
+    }
+}
+
+
+
+

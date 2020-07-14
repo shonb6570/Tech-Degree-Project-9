@@ -1,0 +1,130 @@
+// ==========================================================================
+// Recent member & Member activity
+// ==========================================================================
+
+.profile-image {
+    bottom: 12px;
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 8px;
+    padding: 4px;
+    border: solid 1px $border-color-dark;
+}
+
+.members-text {
+    position: absolute;
+    left: 105px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
+    width: 100%;
+}
+
+.info{
+    bottom: 55px;
+    @media (min-width: 1250px) {
+        width: 100%;
+    }
+
+}
+
+.status {
+    width: 300px;
+    bottom: 45px;
+
+    @media (min-width: 768px) {    //if this is moved to _member.scss it no longer works
+        width: 65%;
+    }
+    @media (min-width: 1024px) {
+        width: 50%;
+    }
+    @media (min-width: 1250px) {
+        width: 70%;
+    }
+}
+
+
+.status,
+.info {
+    @media (min-width: 768px) {
+    font-size: .9em;
+    }
+    @media (min-width: 1024px) {
+        font-size: 1em;
+    }
+}
+
+.date {
+    position: absolute;
+    right: 5px;
+    bottom: 72px;
+}
+
+
+.members-text a {
+    color: $cod-grey;
+    padding: 0;
+}
+
+.members-text h4 {
+    margin: 4px 0;
+}
+
+.members-container {
+    position: relative;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $wild-dove;
+    margin-top: 20px;
+}
+
+.members-container:nth-of-type(4) {
+    border-bottom: none;
+}
+
+.members-container p, 
+.members-container a {
+    margin: auto 0;
+}
+
+.next {
+    position: absolute;
+    right: 5px;
+    top: 20px;
+    color: $cod-grey;
+    font-size: 40px;
+}
+
+.members{
+    @media (min-width: 1024px) {
+        margin-left: 25%;
+        padding: 0 15px;
+    }
+}
+
+.members {
+    padding-top: 5px;
+    padding-left: 20px;
+}
+
+.activity {
+    @media (min-width: 768px) {
+        border-left: solid 1px $border-color;
+        padding-top: 5px;
+    }
+    @media (min-width: 1024px) {
+        border-left: none;
+        margin-right: 25%;
+        padding: 0 15px;
+    }
+}
+
+#userField {
+    @media (min-width: 768px) {
+        margin-top: auto;
+    }
+}
+
+
+

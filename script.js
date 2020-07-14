@@ -54,6 +54,7 @@ window.onload = function(){
 
 const playVideo = (videoID) => {
     const videoElement = document.getElementById(videoID);
+    videoElement.muted = true;
     videoElement.play();
     videoElement.classList.remove("paused"); 
 }

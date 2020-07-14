@@ -1,0 +1,130 @@
+// ==========================================================================
+// Drop down menu styles
+// ==========================================================================
+
+
+//Notification button
+
+#bellIcon {
+    height: 25px;
+    width:  25px;
+}
+
+#unread {
+    width: 9px;
+    height: 9px;
+    border: solid .25px $alert-bell-unread;
+    border-radius: 50% 50%;
+    background-color: $alert-bell-unread;
+    position: absolute;
+    bottom: 35px;
+    left: 20px;
+}
+
+#bellIcon path{
+    fill: $cod-grey;
+}
+
+
+.bell-icon h3{
+    font-size: 12px;
+    margin: 0 20px 0 5px;
+}
+
+// dropdown Button
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+
+.navIcon:hover path,
+#bellIcon:hover path {
+    fill: $icon-hover;
+    transition: .5s ease-in;
+}
+
+.button-primary:hover,
+header h3:hover {
+    color: $icon-hover;
+    transition: .5s ease-in;
+}
+
+header h3:hover {
+    cursor: cell;
+}
+
+.members-text a:hover,
+.next:hover, 
+a:hover {
+    color: $link-hover;
+    transition: .5s;
+}
+
+.btn:hover {
+    color: $button-hover;
+    transition: .5s;
+}
+
+.dropbtn:focus,
+.btn:focus {
+    outline: none;
+}
+
+//dropdown element
+
+.bell-icon {
+    position: relative;
+    display: inline-block;
+    margin-left: auto;
+    padding-top: 15px;
+    padding-right: 10px;
+    border-right: 1px solid $border-color;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    font-size: 14px;
+    background-color: #f1f1f1;
+    min-width: 212px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content p {
+    padding-bottom: 4px;
+}
+
+.dropdown-content p:nth-of-type(2),
+.dropdown-content p:nth-of-type(3) {
+    padding-top: 15px;
+    border-top: 1px solid $font-main-color;
+}
+
+.close-content {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.two {
+    top: 65px;
+
+}
+ 
+.three {
+    top: 115px;
+}
+
+.show {
+      display: block;
+      border-radius: 5px;
+      padding: 0 8px 8px;
+      font-size: 13px;
+}
+
+.hidden {
+    display: none;
+}

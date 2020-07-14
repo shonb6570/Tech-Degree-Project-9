@@ -1,0 +1,44 @@
+// ==========================================================================
+// Alert banner
+// ==========================================================================
+
+.alert-banner {
+    background-color: $banner-color;
+    padding: 5px 0 5px 15px;
+    border: 1px solid $border-color;
+    border-top: none;
+	border-radius: 5px;
+	color: white;
+	position: relative;
+}
+
+.alert-banner p:nth-child(2) {
+	cursor: pointer;
+	position: absolute;
+	top: 3.5px;
+	right: 15px;
+}
+
+
+/* The sticky class is added to the header with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    margin-top: 113.4px;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
+    
+    @media (min-width: 768px) {
+        margin-top: 43px;
+        padding-top: 17.2px;
+        width: 94.7%;
+    }
+
+    @media (min-width: 1250px) {
+            width: 96%;
+    }
+
+    @media (min-width: 1400px){
+            width: 96.7%;
+    }
+  }

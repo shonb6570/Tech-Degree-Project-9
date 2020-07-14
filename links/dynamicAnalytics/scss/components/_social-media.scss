@@ -1,0 +1,103 @@
+// ==========================================================================
+// Social media
+// ==========================================================================
+
+.s-media-container {
+    border-top: 1px solid $wild-dove;
+
+    @media (min-width: 768px) {
+        border-top: none;
+    }
+}
+
+.s-media-container h3 {
+    padding-left: 25px;
+    
+    @media (min-width: 1024px) {
+        padding-left: 14.2%;
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    justify-content: space-evenly;
+
+    @media (min-width: 768px) {
+        display: flex;
+        flex-direction: row;
+        padding: 1em 0 3em;
+        margin: auto;
+        justify-content: space-evenly;
+    }
+    @media (min-width: 1024px) {
+        width: 70%;
+    }
+}
+
+.social-text {
+    flex-direction: row;
+    margin: auto;
+}
+
+.social-text p {
+    margin: 0;
+}
+
+.social-text p:nth-of-type(1) {
+    color: $ship-cove;
+    font-size: 20px;
+}
+.social-text p:nth-of-type(2) {
+    color: $font-main-color;
+    font-size: 42px;
+}
+
+#social-1, 
+#social-2,
+#social-3 {
+    display: flex;
+    width: 100%;
+    padding: 8px 5px 30px 5px;
+    margin: 10px 0;
+
+    @media (min-width: 768px) {
+        display: flex;
+        border: 1px solid $wild-dove;
+        padding: 8px;
+        max-width: 300px;
+    }
+}
+
+#social-1, 
+#social-2 {
+    border-bottom: 1px solid $wild-dove;
+}
+
+.media-logo {
+    height: 125px; 
+    width: 125px;
+    margin-left: 25%;
+
+    @media (min-width: 768px) {
+        height: 100px; 
+        width: 100px;
+        margin-left: 0;
+    }
+}
+
+.media-logo circle,
+.circle {
+    fill: $main-color-lighter !important;
+}
+
+.logo-center {
+    fill: $white;
+}
+
+.logo-shadow {
+    fill: $font-main-color;
+    opacity: 0.5;
+}
+

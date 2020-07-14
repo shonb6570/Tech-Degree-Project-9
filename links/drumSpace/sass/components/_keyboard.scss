@@ -1,0 +1,96 @@
+// ==========================================================================
+// Drum Key/Keyboard key styles
+// ==========================================================================
+
+
+//class for div that groups all keys on page
+.keys {
+    position: absolute;
+    top: 25%;
+    margin: auto auto;
+    background-color: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    height: 3rem;
+    width: 100%;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+
+    @media (min-width: 1024px) {
+        top: 30%;
+    }
+}
+
+//  class for each key
+.key {
+    border: .2rem solid  $border-color-mobile;
+    border-radius: .5rem;
+    box-shadow: 0 0 .6rem $glow-white;
+    margin: .6rem;
+    font-size: .5rem;
+    font-family: $secondary-font;
+    padding: 1rem .5rem;
+    transition: all .07s ease;
+    width: 4.7rem;
+    text-align: center;
+    color: $font-main-color;
+    background: $transparent-black;
+    text-shadow: 0 0 .5rem $glow-white;
+
+    @media (min-width: 1024px) {
+
+        box-shadow: 0 0 1rem;
+        border-color: #ffc600;
+        margin: .8rem;
+        font-size: .5rem;
+        width: 6rem;
+        background: rgba(0,0,0,0.4);
+        text-shadow: 0 0 1rem rgba(255, 255, 255, 0.75);
+    }
+}
+
+.playing {
+    transform: scale(1.1);
+    border-color: $key-playing-mobile;
+    box-shadow: 0 0 1rem $key-playing-mobile;
+
+    @media (min-width: 1024px) {
+    
+        border-color: rgb(0, 255, 242);
+        box-shadow: 0 0 1rem rgb(0, 255, 242);
+    }
+}
+
+//created class for keyboard letters
+kbd {
+    display: block;
+    font-size: 2.5rem;
+    font-family: $main-font;
+
+
+    @media (min-width: 1024px) {
+
+        font-size: 4rem;
+    }
+}
+
+// class for key sound text
+.sound {
+    font-size: .9rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: $sound;
+
+    @media (min-width: 1024px) {
+
+        font-size: 1rem;
+        letter-spacing: .2rem;
+        color: $sound;
+    
+    }
+}
+
+
+

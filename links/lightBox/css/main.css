@@ -1,0 +1,198 @@
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+#search-bar {
+  display: flex;
+  justify-content: center;
+  height: 125px;
+  margin: 2% 16%;
+}
+@media only screen and (min-width: 560px) {
+  #search-bar {
+    height: 200px;
+    margin: 0 25%;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #search-bar {
+    margin: 0 30%;
+  }
+}
+
+.search {
+  border: 1px solid grey;
+  margin: auto;
+  flex-grow: 1;
+  border-radius: 5px;
+  height: 3em;
+  width: 50%;
+  padding: 2px 23px 2px 44px;
+  outline: 0;
+  background-color: #fafafa;
+}
+
+.search:hover, .search:focus {
+  border: 1px solid #00d9ff;
+  background-color: white;
+}
+
+input {
+  background-image: url("../photos/search.png");
+  background-repeat: no-repeat;
+  background-position: 10px 13px;
+  background-size: 25px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  background: linear-gradient(-80deg, #ffffff, #282828, #0c0c0c);
+  background-size: 350% 350%;
+  animation: gradient 8s ease-in-out infinite;
+}
+
+@media only screen and (min-width: 1080px) {
+  html {
+    height: 100%;
+    background: linear-gradient(120deg, #ee7752, #3e7ce6, #23a6d5, #23d5ab);
+    background-size: 350% 350%;
+    animation: gradient 10s ease-in-out infinite;
+  }
+}
+.main-wrapper {
+  max-width: 1480px;
+  margin: 0 auto;
+}
+
+.flex-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  padding: 0 0 40px 0;
+  margin: 0;
+  list-style: none;
+}
+@media only screen and (min-width: 480px) {
+  .flex-container {
+    margin: 0 10%;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .flex-container {
+    margin: 0 12%;
+  }
+}
+
+.flex-item {
+  flex-grow: 1;
+  padding: 30px;
+  width: 200px;
+  height: 125px;
+  margin: 20px 30px;
+  line-height: 150px;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 3em;
+  text-align: center;
+}
+@media only screen and (min-width: 640px) {
+  .flex-item {
+    width: 150px;
+  }
+}
+@media only screen and (min-width: 600px) {
+  .flex-item {
+    max-width: 150px;
+    margin: 20px 12px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flex-item {
+    margin: 20px 20px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .flex-item {
+    margin: 20px 30px;
+  }
+}
+
+.one {
+  background: url("/photos/thumbnails/01.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.two {
+  background: url("/photos/thumbnails/02.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.three {
+  background: url("/photos/thumbnails/03.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.four {
+  background: url("/photos/thumbnails/04.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.five {
+  background: url("/photos/thumbnails/05.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.six {
+  background: url("/photos/thumbnails/06.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.seven {
+  background: url("/photos/thumbnails/07.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.eight {
+  background: url("/photos/thumbnails/08.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.nine {
+  background: url("/photos/thumbnails/09.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.ten {
+  background: url("/photos/thumbnails/10.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.eleven {
+  background: url("/photos/thumbnails/11.jpg") no-repeat center;
+  background-size: cover;
+}
+
+.twelve {
+  background: url("/photos/thumbnails/12.jpg") no-repeat center;
+  background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+  .lb-outerContainer {
+    margin-top: 150px;
+  }
+
+  .lightboxOverlay {
+    opacity: 0.7;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

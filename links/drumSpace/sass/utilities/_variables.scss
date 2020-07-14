@@ -1,0 +1,54 @@
+// ==========================================================================
+// Variables
+// ==========================================================================
+
+
+/* ============================================= */
+/*              Descriptive colors               */
+/* ============================================= */
+//  Descriptive colors    //
+
+$white:                #FFF;
+$transparent-black:    rgba(0,0,0,0.4);
+$pale-white:           rgba(255, 255, 255, 0.75);
+$aqua:                 rgb(0, 255, 242);
+$supernova:            #ffc600;
+
+
+/* ============================================= */
+/*              Base style colors                */
+/* ============================================= */
+
+//main
+
+$main-color:           $supernova;
+$main-color-secondary: $aqua;
+$font-main-color:      $white;
+
+//logo
+
+$logo-main-color:      $supernova;
+$logo-alternate-color: $white;
+
+//border
+
+$glow-white:           $pale-white;
+$glow-yellow:          $supernova;
+$border-color-mobile:  $aqua;
+$border-color-desktop: $supernova;
+
+//button
+
+$key-playing-mobile:   $supernova;
+$key-playing-desktop:  $aqua;
+$sound:                $supernova;
+
+
+
+/* ============================================= */
+/*                Font Stacks                    */
+/* ============================================= */
+
+
+$main-font:      'Quicksand', sans-serif;
+$secondary-font: 'Poiret One', cursive;
