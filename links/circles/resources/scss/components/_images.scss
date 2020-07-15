@@ -1,0 +1,36 @@
+/* ============================================= */
+/*              Images                           */
+/* ============================================= */
+.avatar {
+  @include img (
+  $margin-t: 10px, 
+  $width: 200px,
+  $height: 200px
+  );
+  border-radius: 50%;
+}
+
+
+.img-avatar {
+    @include img (
+    $margin-t: 10px, 
+    $width: 300px,
+    $height: 300px
+    );
+    border-radius: 50%;
+  }
+  
+  .img-frame {
+    @include img (
+    $margin-t: 10px, 
+    $width: 400px,
+    $height: 300px
+    );
+
+    padding: 13px;
+    border: 1px solid $very-light-grey;
+  }
+  
+  .img-logo {
+    @include img();
+  }

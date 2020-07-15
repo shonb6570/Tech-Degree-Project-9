@@ -1,0 +1,205 @@
+/* ============================================= */
+/*              Grid System                      */
+/* ============================================= */
+
+body {
+  background-color: $page-BG-primary;  
+}
+
+
+
+.container {
+    padding: 0 10px;
+      @media ($brk-wide) {
+        max-width: 1400px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  }
+  
+.centered {
+  @media ($brk-wide) {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  padding: 1em 10px;
+  @media ($brk-wide) {
+    flex-direction: row;
+  }
+}
+
+[class^=col] {
+  @include b-radius($padding: 10px);
+  margin-top: 10px;
+  flex-basis: 100%;
+  min-height: 25px;
+  @media ($brk-wide) {
+      display: flex;
+      justify-content: center;
+      margin-top: 0;
+      align-items: center;
+  }
+}
+      
+[class^=col] + [class^=col] {
+  @media ($brk-wide) {
+    margin-left: 10px;
+  }
+}
+
+
+.col-1 {
+  &.theme{
+    background-color: $purple-mountains-majesty;
+  }
+  @media ($brk-wide) {
+    flex-basis: 8.33%;
+  }
+}
+
+.col-2 {
+  &.theme{
+  background-color: $coral;
+  }
+  @media ($brk-wide) {
+    flex-basis: 16.67%;
+  }
+}
+
+.col-3 {
+  &.theme{
+  background-color: $wisteria;
+  }
+  @media ($brk-wide) {
+    flex-basis: 25.00%;
+  }
+}
+
+.col-4 {
+  &.theme{
+  background-color: $electric-blue;
+  }
+  @media ($brk-wide) {
+    flex-basis: 33.33%;
+  }
+}
+
+.col-5 {
+  &.theme{
+  background-color: $granny-smith-apple;
+  }
+  @media ($brk-wide) {
+    flex-basis: 41.67%;
+  }
+}
+
+.col-6 {
+  &.theme{
+  background-color: $boston-blue;
+  }
+  @media ($brk-wide) {
+    flex-basis: 50.00%;
+  }
+}
+
+.col-7 {
+  &.theme{
+  background-color: $wax-flower;
+  }
+  @media ($brk-wide) {
+    flex-basis: 58.33%;
+  }
+}
+
+.col-8 {
+  &.theme{
+  background-color: $amber;
+  }
+  @media ($brk-wide) {
+    flex-basis: 66.67%;
+  }
+}
+
+.col-9 {
+  &.theme{
+  background-color: $sunglo;
+  }
+  @media ($brk-wide) {
+    flex-basis: 75.00%
+  }
+}
+
+.col-10 {
+  &.theme{
+  background-color: $emerald;
+  }
+  @media ($brk-wide) {
+    flex-basis: 83.33%;
+  }
+}
+
+.col-11 {
+  &.theme{
+  background-color: $malibu;
+  }
+  @media ($brk-wide) {
+    flex-basis: 91.67%;
+  }
+}
+
+.col-12 {
+  &.theme{
+  background-color: $turquoise-blue;
+  }
+  @media ($brk-wide) {
+    flex-basis: 100%;
+  }
+}
+
+.card {
+  flex-basis: 100%;
+}
+
+
+.nav {
+  @media ($brk-wide) {
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  }
+}
+
+.nav-link {
+  @media ($brk-wide) {
+  flex-basis: 100px;
+  }
+}
+
+.btn {
+  @media ($brk-wide) {
+  padding: 10px 30px;
+  }
+}
+
+.btn + .btn {
+  @media ($brk-wide) {
+  margin-left: 10px;
+  }
+}
+
+.logo {
+  @media ($brk-wide) {
+  margin-left: initial;
+  margin-right: initial;
+  }
+}
+
+
+

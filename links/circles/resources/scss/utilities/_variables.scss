@@ -1,0 +1,46 @@
+//Descriptive color variables
+$white                    : #fff;
+$mine-shaft               : #3A3A3A;
+$very-light-grey          : lighten(#3A3A3A, 33.5%);
+
+$malibu                   : #51ddfc;
+$sunglo                   : #e4757a;
+$purple-mountains-majesty : #927bc1;
+$emerald                  : #63cc82;
+$coral                    : #fd7856;
+$viking                   : #02daa8;
+$ligther-blue             : #daf7ff;
+
+//Other grid colors
+
+$wisteria                 : #deb2ee;
+$electric-blue            : #7ee6fd;
+$granny-smith-apple       : #88d9a0;
+$boston-blue              : #4da2bb;
+$wax-flower               : #ec9fa3;
+$turquoise-blue           : #80e8d1;
+$amber                    : #FFC107;
+
+//Color usage
+$color-primary            : $viking;
+$color-secondary          : $mine-shaft;
+$color-link               : $malibu;
+$color-bquote-brdr        : $viking;
+
+//UI colors
+
+$ui-colors: (
+    default: $malibu,
+    error: $sunglo,
+    info: $purple-mountains-majesty,
+    success: $emerald,
+    warning: $amber   
+);
+
+//Color usage
+$page-BG-primary          : $ligther-blue; 
+
+
+//Media query break-points
+
+$brk-wide :'min-width: 768px';

@@ -1,0 +1,20 @@
+/* ============================================= */
+/*              Buttons                          */
+/* ============================================= */
+
+.btn {
+    @include b-radius($padding: 10px 0);
+    margin-top: 15px;
+    width: 100%;
+    color: $white;
+    border: none;
+    text-transform: uppercase;
+  }
+  
+// loop to create button classes
+
+  @each $theme, $color in $ui-colors {
+    .#{$theme} {
+        background-color: $color;
+    }
+}

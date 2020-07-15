@@ -1,0 +1,26 @@
+
+// img
+
+@mixin img( 
+    $margin-t: null, 
+    $max-w: null, 
+    $max-h: null,
+    $height: null,
+    $width: null) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: $margin-t;
+        max-width: $max-w; 
+        max-height: $max-h;
+        height: $height;
+        width: $width;
+}
+
+// border radius
+
+@mixin b-radius( 
+    $padding: null) {
+        border-radius: 5px;
+        padding: $padding;
+}
