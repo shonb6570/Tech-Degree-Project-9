@@ -158,12 +158,12 @@ window.addEventListener("scroll", function() {
     if (window.innerWidth <= mobile) {
         animate(1800, projects, moveUpBG, moveDownBG);
         animate(1800, mountains, moveRightBG, moveLeftBG);    
-        animate2(2600, awesomeCo, rightAnimation, leftAnimation);
-        animate2(3250, drumSpace, leftAnimation2, rightAnimation2);
-        animate2(4250, dataAnalytics, rightAnimation, leftAnimation);
-        animate2(4850, styleGuide, leftAnimation2, rightAnimation2);
-        animate2(6050, fsc2020, rightAnimation, leftAnimation);
-        animate2(6650, lightBox, leftAnimation2, rightAnimation2);
+        animate2(2500, awesomeCo, rightAnimation, leftAnimation);
+        animate2(3150, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(4150, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(4750, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(5950, fsc2020, rightAnimation, leftAnimation);
+        animate2(6550, lightBox, leftAnimation2, rightAnimation2);
     } else if (window.innerWidth > mobile && window.innerWidth < desktop ) {
         animate(1800, projects, moveUpBG, moveDownBG);
         animate(1800, mountains, moveRightBG, moveLeftBG);    

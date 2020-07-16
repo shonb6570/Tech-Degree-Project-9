@@ -32,7 +32,37 @@ body {
     // this is what causes the double scroll-bar.  The contact section still is being pushed by 
     // this element or something above it upon media query. 
     //adding height 100% or having no height parameter set (as it was previously), is what causes the issue.
-    height: 8100px;
+    height: 8200px;
+    width: 99%;
+    margin: 0 1px;
+    @include for-size(tablet){
+        width: 100%;
+        margin: 0;
+    }
+
+    @media only screen and (min-width: 725px) {
+        height: 8000px;
+    }
+
+    @media only screen and (min-width: 800px) {
+        height: 7400px;
+    }
+
+    @media only screen and (min-width: 833px) {
+        height: 7250px;
+    }
+
+    @media only screen and (min-width: 876px) {
+        height: 6800px;
+    }
+
+    @media only screen and (min-width: 905px) {
+        height: 6200px;
+    }
+
+    @include for-size(desktop){
+        height: 5600px;
+    }
 }
 
 .nav {

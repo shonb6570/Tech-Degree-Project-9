@@ -95,6 +95,15 @@
   }
 }
 
+.main-heading p {
+  font-size: 28pt;
+}
+@media (min-width: 600px) {
+  .main-heading p {
+    font-size: 34pt;
+  }
+}
+
 .title {
   font-size: 36pt;
   color: #e4e4e4;
@@ -155,8 +164,6 @@
   width: 93%;
   background-color: rgba(252, 186, 43, 0.8);
   height: 1px;
-  margin-top: 60px;
-  margin-bottom: 60px;
 }
 
 .navigation {
@@ -166,9 +173,15 @@
 
 .main-heading {
   position: absolute;
-  top: 820px;
-  height: 7rem;
+  top: 640px;
+  height: 130px;
   background-color: rgba(0, 0, 0, 0.6);
+}
+@media (min-width: 600px) {
+  .main-heading {
+    top: 750px;
+    height: 80px;
+  }
 }
 
 .h1 {
@@ -192,10 +205,10 @@
 
 #phrase {
   position: absolute;
-  top: 580px;
+  top: 440px;
   left: 0;
-  height: 220px;
-  font-size: 30px;
+  height: 180px;
+  font-size: 26px;
   display: inline-block;
   padding: 1em 5em 1em 1em;
   overflow: hidden;
@@ -209,15 +222,16 @@
 }
 @media (min-width: 600px) {
   #phrase {
-    left: 30%;
+    top: 560px;
+    left: 20%;
     max-width: 900px;
   }
 }
 @media (min-width: 1200px) {
   #phrase {
     top: 300px;
-    left: 55%;
-    font-size: 36px;
+    left: 50%;
+    font-size: 30px;
     height: 200px;
   }
 }
@@ -398,12 +412,12 @@
   top: 0;
   bottom: 0;
   width: 100%;
-  height: 980px;
+  height: 750px;
 }
 
 .video {
   position: relative;
-  height: 980px;
+  height: 850px;
   min-width: 100%;
   min-height: 100%;
   top: 45%;
@@ -411,6 +425,11 @@
   transform: translate(-50%, -50%);
   animation: fadein 2s;
   z-index: -1;
+}
+@media (min-width: 600px) {
+  .video {
+    height: 980px;
+  }
 }
 @media (min-width: 1200px) {
   .video {
@@ -866,7 +885,45 @@ body {
 .wrapper {
   position: relative;
   overflow-x: hidden;
-  height: 8100px;
+  height: 8200px;
+  width: 99%;
+  margin: 0 1px;
+}
+@media (min-width: 600px) {
+  .wrapper {
+    width: 100%;
+    margin: 0;
+  }
+}
+@media only screen and (min-width: 725px) {
+  .wrapper {
+    height: 8000px;
+  }
+}
+@media only screen and (min-width: 800px) {
+  .wrapper {
+    height: 7400px;
+  }
+}
+@media only screen and (min-width: 833px) {
+  .wrapper {
+    height: 7250px;
+  }
+}
+@media only screen and (min-width: 876px) {
+  .wrapper {
+    height: 6800px;
+  }
+}
+@media only screen and (min-width: 905px) {
+  .wrapper {
+    height: 6200px;
+  }
+}
+@media (min-width: 1200px) {
+  .wrapper {
+    height: 5600px;
+  }
 }
 
 .nav {

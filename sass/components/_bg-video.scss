@@ -31,14 +31,14 @@
     top: 0;
     bottom: 0;
     width: 100%;
-    height: 980px;
+    height: 750px;
 
 }
 
 // BG video media individual elements
 .video {
     position: relative;
-    height: 980px;
+    height: 850px;
     min-width: 100%; 
     min-height: 100%; 
     top: 45%;
@@ -46,6 +46,10 @@
     transform: translate(-50%,-50%);
     animation: fadein 2s;
     z-index: -1;
+
+    @include for-size(tablet){
+        height: 980px;
+    }
 
     @include for-size(desktop){
         max-width: 1580px;
