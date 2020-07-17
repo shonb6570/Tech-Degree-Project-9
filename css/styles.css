@@ -898,44 +898,31 @@ body {
 .wrapper {
   position: relative;
   overflow-x: hidden;
-  height: 8200px;
-  width: 99%;
-  margin: 0 1px;
+  height: 8600px;
 }
-@media (min-width: 600px) {
+@media only screen and (min-width: 750px) {
   .wrapper {
-    width: 100%;
-    margin: 0;
+    height: 8200px;
   }
 }
-@media only screen and (min-width: 725px) {
+@media only screen and (min-width: 850px) {
   .wrapper {
-    height: 8000px;
+    height: 7800px;
   }
 }
-@media only screen and (min-width: 800px) {
-  .wrapper {
-    height: 7400px;
-  }
-}
-@media only screen and (min-width: 833px) {
-  .wrapper {
-    height: 7250px;
-  }
-}
-@media only screen and (min-width: 876px) {
+@media only screen and (min-width: 950px) {
   .wrapper {
     height: 6800px;
   }
 }
-@media only screen and (min-width: 905px) {
+@media only screen and (min-width: 1000px) {
   .wrapper {
     height: 6200px;
   }
 }
 @media (min-width: 1200px) {
   .wrapper {
-    height: 5600px;
+    height: 6000px;
   }
 }
 

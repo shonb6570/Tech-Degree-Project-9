@@ -13,14 +13,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#navbar" data-offset="500">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     <div class="wrapper">
       <div class="container-fluid px-0" id="home">
 
-            <nav class="navbar navbar-expand-lg navbar-dark navigation fixed-top">
+            <nav class="navbar navbar-expand-lg navbar-dark navigation fixed-top" id="navbar">
               <a id="nav-brand" href="#home"> Shaun Bolak // Web Design</a>
               <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,8 +28,8 @@
             
               <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
-                  <li class="nav-item active">
-                    <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
                   </li>
                   <li class="nav-item">
                     <a class="nav-link" href="#about">About</a>
@@ -488,46 +488,30 @@
                 An interactive image gallery example, which is a common feature of many websites, from photo sites to e-commerce applications. Search functionality is enabled with third-party JavaScript plugins.  Flexbox has been utilized to maintain a responsive, mobile-first design.
               </p>
           </div>
-
-
         
         </div>
         <!-- /sixth project-->
 
+        <hr class="sectionHR">
+
+        <div class="container-fluid text-center headline" id="contact">
+          <p>Contact</p>
+          <p class="copy contactCopy">
+            Interested in working together, want to discuss a project, or just say "hi?" <br>Please reach me at: <a id="emailLink" href = "mailto:shon@shaunbolak.com">shon@shaunbolak.com</a>.  
+          </p>
+        </div>
 
       </div>
       <!-- /PROJECTS section-->
 
     </div>
     <!-- /page wrapper -->
-    <hr class="sectionHR">
+
 
 
     <!-- CONTACT section -->
-    <div class="container-fluid text-center headline" id="contact">
-      <p>Contact</p>
-      <p class="copy contactCopy">
-        Interested in working together, want to discuss a project, or just say "hi?" <br>Send me a message below or email me at <a id="emailLink" href = "mailto:shaunbolak@gmail.com">shaunbolak@gmail.com</a>.  
-      </p>
-    </div>
 
-    <hr class="sectionHR">
 
-    <div class="container text-light contact-info mb-5">
-      <div class="form-group form-label">
-        <label for="name">Name:</label>
-        <input type="text" class="form-control contactForm" id="name">
-      </div>
-      <div class="form-group form-label">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control contactForm" id="email">
-      </div>
-      <div class="form-group form-label mb-5">
-        <label for="message">Message:</label>
-        <textarea class="form-control contactForm" id="message" rows="6"></textarea>
-      </div>
-      <button type="submit" class="btn" id="submitBtn">Submit</button>
-    </div>
     <!-- /CONTACT section -->
 
   <script src="script.js"></script>
