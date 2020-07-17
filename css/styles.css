@@ -898,31 +898,31 @@ body {
 .wrapper {
   position: relative;
   overflow-x: hidden;
-  height: 8600px;
+  height: 8700px;
 }
 @media only screen and (min-width: 750px) {
   .wrapper {
-    height: 8200px;
+    height: 8500px;
   }
 }
 @media only screen and (min-width: 850px) {
   .wrapper {
-    height: 7800px;
+    height: 7900px;
   }
 }
 @media only screen and (min-width: 950px) {
   .wrapper {
-    height: 6800px;
+    height: 7400px;
   }
 }
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    height: 6200px;
+    height: 6500px;
   }
 }
 @media (min-width: 1200px) {
   .wrapper {
-    height: 6000px;
+    height: 6400px;
   }
 }
 

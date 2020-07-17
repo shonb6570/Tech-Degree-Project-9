@@ -32,26 +32,26 @@ body {
     // this is what causes the double scroll-bar.  The contact section still is being pushed by 
     // this element or something above it upon media query. 
     //adding height 100% or having no height parameter set (as it was previously), is what causes the issue.
-    height: 8600px;
+    height: 8700px;
 
     @media only screen and (min-width: 750px) {
-        height: 8200px;
+        height: 8500px;
     }
 
     @media only screen and (min-width: 850px) {
-        height: 7800px;
+        height: 7900px;
     }
 
     @media only screen and (min-width: 950px) {
-        height: 6800px;
+        height: 7400px;
     } 
 
     @media only screen and (min-width: 1000px) {
-        height: 6200px;
+        height: 6500px;
     }
 
     @include for-size(desktop){
-        height: 6000px;
+        height: 6400px;
     }
 }
 
@@ -69,16 +69,3 @@ a:hover {
     height: 940px;
 }
 
-
-// .spacer {
-//     height:200px;
-//     margin-top: 5000px;
-//     @include for-size(tablet){
-//         margin-top: 4700px;
-//     }
-//     @include for-size(desktop){
-//         height:5px;
-//         margin-top: 2400px;
-//     }
-    
-// }
