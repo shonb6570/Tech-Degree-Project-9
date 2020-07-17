@@ -95,7 +95,7 @@ html {
   padding: 30px;
   width: 200px;
   height: 125px;
-  margin: 20px 30px;
+  margin: 20px 80px;
   line-height: 150px;
   border-radius: 5px;
   color: white;
@@ -106,6 +106,7 @@ html {
 @media only screen and (min-width: 640px) {
   .flex-item {
     width: 150px;
+    margin: 20px 10px;
   }
 }
 @media only screen and (min-width: 600px) {
@@ -195,3 +196,4 @@ html {
   }
 }
 
+/*# sourceMappingURL=main.css.map */

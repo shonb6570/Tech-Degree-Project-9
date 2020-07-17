@@ -175,6 +175,7 @@
     padding: 0 10px;
     @include for-size(tablet){
         width: 90%;
+        margin-right: 0;
     }
     @include for-size(desktop){
         width: 70%;

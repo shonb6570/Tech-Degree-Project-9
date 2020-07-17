@@ -205,14 +205,15 @@
 
 #phrase {
   position: absolute;
-  top: 440px;
+  top: 390px;
   left: 0;
-  height: 180px;
+  height: 230px;
   font-size: 26px;
   display: inline-block;
-  padding: 1em 5em 1em 1em;
+  padding: 1em 6em 1em 1em;
   overflow: hidden;
   width: 100%;
+  z-index: 2;
   -webkit-transition-property: top, left, font-size, height;
   -webkit-transition-duration: 1s;
   -webkit-transition-timing-function: ease-in-out;
@@ -223,16 +224,26 @@
 @media (min-width: 600px) {
   #phrase {
     top: 560px;
-    left: 20%;
-    max-width: 900px;
+    left: 18%;
+    max-width: 1000px;
+    height: 160px;
   }
 }
 @media (min-width: 1200px) {
   #phrase {
     top: 300px;
-    left: 50%;
+    left: 40%;
     font-size: 30px;
     height: 200px;
+    max-width: 1000px;
+    padding-right: 16em;
+    height: 220px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #phrase {
+    left: 920px;
+    max-width: 900px;
   }
 }
 
@@ -266,6 +277,36 @@
   }
 }
 
+#phrase:before {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: -20%;
+  width: 20%;
+  height: 72%;
+  background: rgba(255, 8, 0, 0.459);
+  -webkit-transform-origin: 0 100%;
+  -ms-transform-origin: 0 100%;
+  transform-origin: 0 100%;
+  -webkit-transform: skew(-29deg);
+  -ms-transform: skew(-29deg);
+  transform: skew(29deg);
+  z-index: -1;
+  -webkit-transition-property: top, left, width, height, transform;
+  -webkit-transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  transition-property: top, left, width, height, transform;
+  transition-duration: 1s;
+  transition-timing-function: ease-in-out;
+}
+@media (min-width: 1200px) {
+  #phrase:before {
+    -webkit-transform: skew(-50deg);
+    -ms-transform: skew(-50deg);
+    transform: skew(-50deg);
+  }
+}
+
 #home:after {
   content: "";
   position: absolute;
@@ -292,7 +333,6 @@
     -webkit-transform: skew(-50deg);
     -ms-transform: skew(-50deg);
     transform: skew(-50deg);
-    width: 100%;
   }
 }
 
@@ -305,21 +345,6 @@
 /* ============================================= */
 /*          Project logos SVG styles                 */
 /* ============================================= */
-@keyframes offset {
-  100% {
-    stroke-dashoffset: 0;
-  }
-}
-@keyframes fillStroke {
-  100% {
-    fill: white;
-  }
-}
-@keyframes fillPath {
-  100% {
-    fill: #D00005;
-  }
-}
 #logo {
   height: 150px;
   width: 350px;
@@ -328,25 +353,14 @@
 #logoFill {
   fill: #D00005;
   stroke: #D00005;
-  animation: fillPath 1.5s 1.2s forwards;
 }
 
 .logo-stroke {
   stroke: white;
   stroke-width: 1;
-  stroke-dasharray: 325;
-  stroke-dashoffset: 325;
-  animation: offset 3s linear forwards, fillStroke 1.2s 3s forwards;
+  fill: white;
 }
 
-/* ============================================= */
-/*          SVG Keyframes                        */
-/* ============================================= */
-@keyframes fill-drumSpace {
-  100% {
-    fill: #ffc600;
-  }
-}
 /* ============================================= */
 /*          drumspace logo                            */
 /* ============================================= */
@@ -358,9 +372,7 @@
 #drumSpaceLogo path {
   stroke: #ffc600;
   stroke-width: 0.25;
-  stroke-dasharray: 295;
-  stroke-dashoffset: 295;
-  animation: offset 4s linear forwards, fill-drumSpace 0.8s 4s forwards;
+  fill: #ffc600;
 }
 
 #circlesLogo {
@@ -604,6 +616,7 @@
 @media (min-width: 600px) {
   .gif {
     width: 90%;
+    margin-right: 0;
   }
 }
 @media (min-width: 1200px) {
