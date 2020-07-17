@@ -2,4 +2,4 @@
 deployment:
  tasks:
  - export DEPLOYPATH=/home/shaunbol/repositories/testing/
- - /bin/cp -R /home/username/gitrepo/testing $DEPLOYPATH
+ - /bin/cp -R /home/username/repositories/testing $DEPLOYPATH
