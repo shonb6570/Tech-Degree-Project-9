@@ -1,29 +1,16 @@
-
-@keyframes appear {
-    from {
-        opacity: 0;
-    } 
-    to {
-        opacity: 1;
-    }
-}
-
-
-@keyframes hide {
-    from {
-        opacity: 0;
-    } 
-    to {
-        opacity: 0;
-    }
-}
-
+// ==========================================================================
+// Base
+// ==========================================================================
 
 
 body {
-    background-color: black; 
+    background-color: $black; 
     height: 100%;
     z-index: -1;
+}
+
+.navigation {
+    z-index: 3;
 }
 
 .wrapper {
@@ -55,14 +42,17 @@ body {
     }
 }
 
-.nav {
-    background-color: rgba(0, 0, 0, .4);
-}
-
 a:hover {
     text-decoration: none;
-  }
+}
 
+.sectionHR {
+    border: 0;
+    clear:both;
+    display:block;
+    width: 93%;               
+    height: 1px;
+}
 
 // element to keep normal page flow - the BG video element is out of normal page flow
 .margin {

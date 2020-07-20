@@ -7,18 +7,24 @@
 /*         Descriptive colors                    */
 /* ============================================= */
 
+$white                             : rgb(255, 255, 255);
+$mercury                           : rgb(228, 228, 228);
+$silver                            : rgb(200, 200, 200);
+$pale-white                        : rgba(255, 255, 255, 0.692);
 $broom                             : #fffb0f;
+$supernova                         : #ffc600;
 $lightning-yellow                  : #FCBA2B;
 $lightning-yellow-lighter          : rgba(252, 186, 43, 0.8);
-$mine-shaft                        : #3B3B3B;
+$cyan                              : rgb(0, 232, 249);
+$aqua                              : rgba(0, 249, 249, 0.578);
 $guardsman-red                     : #D00005;
 $sunset-orange                     : #f74646;
 $flush-mahogany                    : #cd3a3a;
-$white                             : rgb(255, 255, 255);
-$silver                            : rgba(200, 200, 200);
+$red-lighter                       : rgba(255, 8, 0, 0.459);
 $very-pale-silver                  : rgba(200, 200, 200, 0.2);
-$supernova                         : #ffc600;
-
+$mine-shaft                        : #3B3B3B;
+$black-lighter                     : rgba(0, 0, 0, 0.5);
+$black                             : rgb(0,0,0);
 
 /* ============================================= */
 /*         Base style colors                     */
@@ -28,8 +34,8 @@ $supernova                         : #ffc600;
     //awesomeCo logo
 $awesomeco-logo-main-path-color     : $white;
 $awesomeco-logo-main-fill           : $guardsman-red;
-$projects-BG-color                  : rgba(0, 249, 249, 0.578);
-$projects-BG-mobile-color           : rgb(0, 232, 249);
+$projects-BG-color                  : $aqua;
+$projects-BG-mobile-color           : $cyan;
 
     //drumspace logo
 $drumspace-logo-main-color          : $supernova;

@@ -1,97 +1,6 @@
-
-@keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-@keyframes fadeOut {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-}
-
-
-@keyframes move-right {
-    from {
-        transform: translateX(-200%);
-    } 
-    to {
-        transform: none;
-    }
-}
-
-@keyframes move-left {
-    from {
-        transform: none;
-    } 
-    to {
-        transform: translateX(-200%);
-    }
-}
-
-
-@keyframes move-left-two {
-    from {
-        transform: translateX(200%);
-    } 
-    to {
-        transform: none;
-    }
-}
-
-@keyframes move-right-two {
-    from {
-        transform: none;
-    } 
-    to {
-        transform: translateX(200%);
-    }
-}
-
-@keyframes move-right-mountains {
-    from {
-        transform: translateX(-28%);
-    } 
-    to {
-        transform: translateX(-8%);
-    }
-}
-
-@keyframes move-left-mountains {
-    from {
-        transform: translateX(-8%);
-    } 
-    to {
-
-        transform: translateX(-28%);
-    }
-}
-
-@keyframes move-up-project-title {
-    from {
-        transform: none;
-    } 
-    to {
-        transform: translateY(-80%);
-    }
-}
-
-@keyframes move-down-project-title {
-    from {
-        transform: translateY(-80%);
-    } 
-    to {
-        transform: none;
-    }
-}
-
+// ==========================================================================
+// Projects Section Styles
+// ==========================================================================
 
 
 #projectsSectionContainer{
@@ -164,7 +73,7 @@
     animation: fade-in 1.5s ease-in-out;
 }
 
-
+//looped videos for project examples
 .gif {
     border: 1px solid white;
     border-radius: 5px;
@@ -189,10 +98,6 @@
     height: 400px;
 }
 
-.copy {
-    color: white;
-}
-
 .projectTitle {
     margin-bottom: 0;
 }
@@ -204,6 +109,7 @@
     }
 }
 
+//classes to add movement for elements on page
 .left {
     transform: translateX(-200%);
 }
@@ -212,6 +118,7 @@
     transform: translateX(200%);
 }
 
+// Gradient behind projects in Mobile.
 .projectBG{
     background: linear-gradient( #000, rgba(255, 255, 255, 0.359),rgba(255, 255, 255, 0.201), #000);
     z-index: -3;
@@ -219,6 +126,8 @@
         background: none;
     }
 }
+
+// Individual project :before/:after element styles
 
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,

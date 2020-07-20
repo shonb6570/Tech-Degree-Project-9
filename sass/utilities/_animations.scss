@@ -1,0 +1,119 @@
+// ==========================================================================
+// Keyframes
+// ==========================================================================
+
+
+// Nav-brand animations
+
+@keyframes appear {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes hide {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+}
+
+//projects and title animations
+
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+}
+
+
+@keyframes move-right {
+    from {
+        transform: translateX(-200%);
+    } 
+    to {
+        transform: none;
+    }
+}
+
+@keyframes move-left {
+    from {
+        transform: none;
+    } 
+    to {
+        transform: translateX(-200%);
+    }
+}
+
+
+@keyframes move-left-two {
+    from {
+        transform: translateX(200%);
+    } 
+    to {
+        transform: none;
+    }
+}
+
+@keyframes move-right-two {
+    from {
+        transform: none;
+    } 
+    to {
+        transform: translateX(200%);
+    }
+}
+
+@keyframes move-right-mountains {
+    from {
+        transform: translateX(-28%);
+    } 
+    to {
+        transform: translateX(-8%);
+    }
+}
+
+@keyframes move-left-mountains {
+    from {
+        transform: translateX(-8%);
+    } 
+    to {
+
+        transform: translateX(-28%);
+    }
+}
+
+@keyframes move-up-project-title {
+    from {
+        transform: none;
+    } 
+    to {
+        transform: translateY(-80%);
+    }
+}
+
+@keyframes move-down-project-title {
+    from {
+        transform: translateY(-80%);
+    } 
+    to {
+        transform: none;
+    }
+}

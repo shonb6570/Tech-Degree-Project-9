@@ -1,9 +1,12 @@
-/* ============================================= */
-/*          Project logos SVG styles                 */
-/* ============================================= */
+// ==========================================================================
+// Project logo SVG styles 
+// ==========================================================================
 
 
-    // awesomeCo
+
+/* ============================================= */
+/*          AwesomeCo                            */
+/* ============================================= */
 
 #logo {
     height: 150px;
@@ -11,24 +14,8 @@
 }
 
 
-
-#logoFill {
-    fill: $awesomeco-logo-main-fill;
-    stroke: $awesomeco-logo-main-fill;
-}
-
-.logo-stroke {
-    stroke: $awesomeco-logo-main-path-color;
-    stroke-width: 1;
-    fill: $awesomeco-logo-main-path-color;
-}
-
-
-    // drumspace
-
-
 /* ============================================= */
-/*          drumspace logo                            */
+/*          drumspace logo                       */
 /* ============================================= */
 
 #drumSpaceLogo {
@@ -36,12 +23,10 @@
     width: 450px;
 }
 
-#drumSpaceLogo path{
-    stroke: $drumspace-logo-main-color;
-    stroke-width: .25;
-    fill: $drumspace-logo-main-color;
-}
 
+/* ============================================= */
+/*          circles logo                         */
+/* ============================================= */
 
 #circlesLogo {
     margin-top: 20px;
@@ -49,10 +34,9 @@
     padding-left: 20px;
 }
 
-.circles-Logo-Font {
-    fill: $circles-logo-primary;
-    stroke: $circles-logo-primary-darker;
-}
+/* ============================================= */
+/*          FSC2020 logo                         */
+/* ============================================= */
 
 #fsc2020logo{
     width: 80%;
