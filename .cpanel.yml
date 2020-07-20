@@ -1,5 +1,5 @@
 ---
 deployment:
- tasks:
- - export DEPLOYPATH=/home/shaunbol/repositories/testing/
- - /bin/cp -R /home/username/repositories/testing $DEPLOYPATH
+  tasks:
+    - export DEPLOYPATH=/home/shaunbol/public_html/
+    - /bin/cp -R * $DEPLOYPATH
