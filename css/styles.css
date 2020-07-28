@@ -195,6 +195,11 @@ hr,
     font-size: 42pt;
   }
 }
+@media only screen and (min-width: 1400px) {
+  #aboutHeadline {
+    max-width: 1100px;
+  }
+}
 
 .about-me {
   font-size: 38pt;
@@ -207,6 +212,12 @@ hr,
 @media (min-width: 1200px) {
   .about-me-bold {
     font-size: 46pt;
+  }
+}
+
+@media (min-width: 1200px) {
+  #profileDescription {
+    font-size: 20pt;
   }
 }
 
@@ -431,7 +442,7 @@ hr,
 @media (min-width: 1200px) {
   .video {
     width: 2400px;
-    height: 1400px;
+    height: 1100px;
   }
 }
 
@@ -486,7 +497,7 @@ hr,
 @media only screen and (min-width: 1400px) {
   #phrase {
     left: 920px;
-    max-width: 900px;
+    max-width: 1600px;
   }
 }
 
@@ -817,28 +828,44 @@ hr,
     max-width: 1000px;
   }
 }
+@media only screen and (min-width: 1400px) {
+  #about {
+    max-width: 1400px;
+  }
+}
 
 #aboutTitle {
   transform: translateX(-200%);
 }
 
 #shaunPortraitWrapper {
-  max-width: 700px;
+  width: 700px;
+  margin-bottom: 40px;
 }
 @media (min-width: 600px) {
   #shaunPortraitWrapper {
-    max-width: 400px;
+    margin-bottom: 20px;
+    width: 400px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #shaunPortraitWrapper {
+    width: 600px;
   }
 }
 
 #shaunPortrait {
   max-height: 500px;
-  margin-bottom: 40px;
 }
 @media (min-width: 600px) {
   #shaunPortrait {
     max-height: 400px;
     margin-bottom: 0;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  #shaunPortrait {
+    max-height: 700px;
   }
 }
 

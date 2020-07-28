@@ -217,6 +217,10 @@ hr,
        padding-left: 60px;
        font-size: 42pt;
         }
+    @media only screen and (min-width: 1400px){
+        max-width: 1100px;
+        
+    }
 }
 
 
@@ -231,6 +235,12 @@ hr,
     font-size: 42pt;
     @include for-size(desktop){
         font-size: 46pt;
+    }
+}
+
+#profileDescription {
+    @include for-size(desktop){
+        font-size: 20pt;
     }
 }
 

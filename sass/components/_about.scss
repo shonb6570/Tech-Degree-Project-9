@@ -8,7 +8,9 @@
     @include for-size(desktop){
         max-width: 1000px;
         }
-    
+    @media only screen and (min-width: 1400px){
+        max-width: 1400px;
+    }
 }
 
 #aboutTitle {
@@ -17,17 +19,26 @@
 
 
 #shaunPortraitWrapper{
-    max-width: 700px;
+    width: 700px;
+    margin-bottom: 40px;
     @include for-size(tablet){
-        max-width: 400px;
+        margin-bottom: 20px;
+       width: 400px;
         }
+    @media only screen and (min-width: 1400px){
+        width: 600px;
+    }
 }
 #shaunPortrait{
     max-height: 500px;
-    margin-bottom: 40px;
+
     @include for-size(tablet){
     max-height: 400px;
     margin-bottom: 0;
+    }
+    @media only screen and (min-width: 1400px){
+        max-height: 700px;
+        
     }
 }
 
