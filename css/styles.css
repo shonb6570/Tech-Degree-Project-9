@@ -441,7 +441,7 @@ hr,
 }
 @media (min-width: 1200px) {
   .video {
-    width: 2400px;
+    width: 2800px;
     height: 1100px;
   }
 }
@@ -628,7 +628,6 @@ hr,
 }
 @media only screen and (min-width: 1200px) {
   #projects {
-    margin-top: 580px;
     width: 600px;
     left: 35%;
     margin-left: 0;
@@ -826,6 +825,7 @@ hr,
 @media (min-width: 1200px) {
   #about {
     max-width: 1000px;
+    margin-bottom: 0 !important;
   }
 }
 @media only screen and (min-width: 1400px) {
