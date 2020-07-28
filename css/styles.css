@@ -441,8 +441,13 @@ hr,
 }
 @media (min-width: 1200px) {
   .video {
-    width: 2800px;
+    width: 2400px;
     height: 1100px;
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .video {
+    height: 1600px;
   }
 }
 

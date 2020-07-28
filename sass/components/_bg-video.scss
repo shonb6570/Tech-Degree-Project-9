@@ -50,7 +50,10 @@
     }
 
     @include for-size(desktop){
-        width: 2800px;
+        width: 2400px;
         height: 1100px;
+    }
+    @media only screen and (min-width: 1400px){
+        height: 1600px;
     }
 }
