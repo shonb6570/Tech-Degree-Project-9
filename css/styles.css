@@ -501,8 +501,7 @@ hr,
 }
 @media only screen and (min-width: 1400px) {
   #phrase {
-    left: 1400px;
-    max-width: 1700px;
+    left: 60%;
   }
 }
 
