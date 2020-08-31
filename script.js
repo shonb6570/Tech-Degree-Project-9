@@ -74,11 +74,11 @@ const play = (id) => {
 const quotes = [
     ['"The best things in life aren\'t things" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Linda Godeau'],
     ['"The unexamined life is not worth living" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Socrates'],
-    ['"If you are going through hell, keep going" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Winston Churchill'],
+    ['"Live as if you were to die tomorrow. Learn as if you were to live forever" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Mahatma Gandhi'],
     ['"Doing nothing often leads to the very best of something" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Winnie the Pooh'],
-    ['"Never have so many been manipulated so much by so few" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Aldous Huxley'],
+    ['"Everything always seems impossible until it\'s done" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Nelson Mandela'],
     ['"The most beautiful experience we can have is the mysterious" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Albert Einstein'],
-    ['"...most men and women will grow up to love their servitude and will never dream of revolution." <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Aldous Huxley']
+    ['"He who is not courageous enough to take risks will accomplish nothing in life" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Muhammad Ali']
     ];
     
     
