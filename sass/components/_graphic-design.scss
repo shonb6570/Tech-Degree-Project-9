@@ -1,0 +1,15 @@
+// ==========================================================================
+//  Graphic Design Section
+// ==========================================================================
+
+
+#graphicDesign {
+    margin-top: 1100px;
+
+    @include for-size(tablet){
+        margin-top: 1000px;
+    }
+    @include for-size(desktop){
+        margin-top: 400px;
+    }
+}

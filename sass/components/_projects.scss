@@ -4,14 +4,15 @@
 
 
 #projectsSectionContainer{
-    height: 1329px;
-    background: linear-gradient(#000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
+    height: 829px;
+    background: linear-gradient(#000, rgba(252, 186, 43, 0.735), #000, #000);
     overflow: hidden;
     z-index: -4;
 
 
     @media only screen and (min-width: 600px) {
-        height: 1400px;
+        background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
+        height: 650px;
       }
 
     @media only screen and (min-width: 768px) {
@@ -20,28 +21,25 @@
 }
 
 #projects{
-    margin-top: 1100px;
+    margin-top: 400px;
     height: 200px;
-    width: 70%;
+    width: 90%;
     position: absolute;
-    left: 15%;
+    font-size: 120pt;
     z-index: 1;
 
     @media only screen and (min-width: 600px) {
-        width: 70%;
+        width: 100%;
+        font-size: 150pt;
       }
 
     @media only screen and (min-width: 768px) {
         margin-top: 500px;
-        width: 50%;
-        margin-left: 10%;
+        font-size: 170pt;
     }
 
     @media only screen and (min-width: 1200px){
         // margin-top: 580px;
-        width: 600px;
-        left: 35%;
-        margin-left: 0;
     }
 }
 
@@ -49,13 +47,13 @@
     height: 250px;
     transform: translateX(-28%);
     position: relative;
-    margin-top: 1080px;
+    margin-top: 350px;
     z-index: 2;
 
 
 
     @media only screen and (min-width: 600px) {
-        margin-top: 1100px;
+        margin-top: 350px;
         left: 20%;
       }
 
@@ -73,27 +71,105 @@
     animation: fade-in 1.5s ease-in-out;
 }
 
+
+
+
+
+//logo design Section
+
+
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+
+@keyframes offset {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fill {
+    0% {
+        fill: transparent;
+    }
+    100% {
+        fill: #ce3427;
+    }
+}
+
+
+
+
+#logoDesign {
+
+    width: 100%;
+    margin-top: 1200px;
+
+    @include for-size(tablet){
+        width: 80%;
+
+    }
+
+    @include for-size(desktop){
+        margin-top: 400px;
+
+    }
+}
+
+
+.supermassiveLogoCircle {
+    animation: fill 4s 2s forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.supermassiveLogoOrange {
+    animation: fill 5s 3.5s forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+.supermassiveLogoWhite {
+    stroke: $white;
+    stroke-width: 2px;
+    stroke-dasharray: 330;   
+    stroke-dashoffset: 330;
+    animation: offset 5s 3.5s forwards;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+    @media only screen and (min-width: 768px) {
+       stroke-width: 1.2px;
+    }
+
+}
+
+#logoDesignLink:hover {
+    stroke: rgb(0, 217, 255);
+}
+
 //looped videos for project examples
 .gif {
     border: 1px solid white;
     border-radius: 5px;
     background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
-    min-width: 450px;
-    max-width: 100%;
-    height: 400px;
-    padding: 0 10px;
-    @include for-size(tablet){
-        width: 90%;
-        margin-right: 0;
-    }
+    width: 400px;
+    // max-width: 100%;
+    height: 300px;
     @include for-size(desktop){
-        width: 70%;
-        margin-left: 150px;
+        width: 500px;
+    }
+}
+
+.gif-container {
+    @include for-size(desktop){
+        padding-right: 80px;
     }
 }
 
 #projectExamples {
-    margin-top: 5rem;
+    margin-top: 20px;
     width: 100%;
     height: 400px;
 }
@@ -150,12 +226,12 @@
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after {
-    -webkit-transform: skew(-1deg);
-    -ms-transform: skew(-11deg);
+    -webkit-transform: skew(-14deg);
+    -ms-transform: skew(-14deg);
     transform: skew(-14deg);
 }
 
-// chevron slanting left
+// projects div chevron slanting left
 #styleGuideCopy:after,
 #fsc2020Copy:after,
 #lightBoxCopy:after  {
@@ -182,7 +258,7 @@
     }
 }
 
-// chevron slanting right
+// projects div chevron slanting right
 #styleGuideCopy:after {
     left: 60px;
     @include for-size(desktop){
@@ -204,6 +280,10 @@
     }
 }
 
+
+.project-copy {
+    max-width: 600px; 
+}
 
 
 

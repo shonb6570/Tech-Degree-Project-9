@@ -156,17 +156,17 @@ window.addEventListener("scroll", function() {
 
     // slide in projects on scroll
     if (window.innerWidth <= mobile) {
-        animate(1800, projects, moveUpBG, moveDownBG);
-        animate(1800, mountains, moveRightBG, moveLeftBG);    
-        animate2(2500, awesomeCo, rightAnimation, leftAnimation);
-        animate2(3150, drumSpace, leftAnimation2, rightAnimation2);
-        animate2(4150, dataAnalytics, rightAnimation, leftAnimation);
-        animate2(4750, styleGuide, leftAnimation2, rightAnimation2);
-        animate2(5950, fsc2020, rightAnimation, leftAnimation);
-        animate2(6550, lightBox, leftAnimation2, rightAnimation2);
+        animate(2900, projects, moveUpBG, moveDownBG);
+        animate(2900, mountains, moveRightBG, moveLeftBG);    
+        animate2(2600, awesomeCo, rightAnimation, leftAnimation);
+        animate2(3250, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(4250, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(4850, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(6050, fsc2020, rightAnimation, leftAnimation);
+        animate2(6650, lightBox, leftAnimation2, rightAnimation2);
     } else if (window.innerWidth > mobile && window.innerWidth < desktop ) {
-        animate(1800, projects, moveUpBG, moveDownBG);
-        animate(1800, mountains, moveRightBG, moveLeftBG);    
+        animate(2700, projects, moveUpBG, moveDownBG);
+        animate(2700, mountains, moveRightBG, moveLeftBG);    
         animate2(2300, awesomeCo, rightAnimation, leftAnimation);
         animate2(2900, drumSpace, leftAnimation2, rightAnimation2);
         animate2(3300, dataAnalytics, rightAnimation, leftAnimation);
@@ -174,14 +174,58 @@ window.addEventListener("scroll", function() {
         animate2(4200, fsc2020, rightAnimation, leftAnimation);
         animate2(4800, lightBox, leftAnimation2, rightAnimation2);
     } else {
-        animate(1900, projects, moveUpBG, moveDownBG);
-        animate(1900, mountains, moveRightBG, moveLeftBG);    
-        animate2(2300, awesomeCo, rightAnimation, leftAnimation);
-        animate2(2600, drumSpace, leftAnimation2, rightAnimation2);
-        animate2(3000, dataAnalytics, rightAnimation, leftAnimation);
-        animate2(3500, styleGuide, leftAnimation2, rightAnimation2);
-        animate2(3900, fsc2020, rightAnimation, leftAnimation);
-        animate2(4500, lightBox, leftAnimation2, rightAnimation2);
+        animate(2700, projects, moveUpBG, moveDownBG);
+        animate(2700, mountains, moveRightBG, moveLeftBG);    
+        animate2(3200, awesomeCo, rightAnimation, leftAnimation);
+        animate2(3500, drumSpace, leftAnimation2, rightAnimation2);
+        animate2(3800, dataAnalytics, rightAnimation, leftAnimation);
+        animate2(4100, styleGuide, leftAnimation2, rightAnimation2);
+        animate2(4400, fsc2020, rightAnimation, leftAnimation);
+        animate2(4700, lightBox, leftAnimation2, rightAnimation2);
     } 
 });
+
+
+
+// gsap.registerPlugin(ScrollTrigger);
+
+// let sections = gsap.utils.toArray(".slide");
+
+// gsap.to(sections, {
+//   xPercent: -100 * (sections.length - 1),
+//   ease: "none",
+//   scrollTrigger: {
+//     trigger: ".img-slider",
+//     start: "bottom 80%",
+//     pin: true,
+//     scrub: 1,
+//     snap: 1 / (sections.length - 1),
+//     // base vertical scrolling on how wide the container is so it feels more natural.
+//     end: () => "+=" + document.querySelector(".img-slider").offsetWidth
+//   }
+// });
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+let sections = gsap.utils.toArray(".slide");
+
+var tl = gsap.timeline({x: 100, duration: 3});
+
+tl.to(sections, {
+  xPercent: -100 * (sections.length - 1),
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".img-slider",
+    start: "bottom 80%",
+    pin: true,
+    scrub: 1,
+    snap: 1 / (sections.length - 1),
+    // base vertical scrolling on how wide the container is so it feels more natural.
+    end: () => "+=" + document.querySelector(".img-slider").offsetWidth
+  }
+});
+
+
+
 

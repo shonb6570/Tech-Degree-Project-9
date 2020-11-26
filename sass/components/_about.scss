@@ -1,8 +1,15 @@
+// ==========================================================================
+//  About section
+// ==========================================================================
+
+
 #about {
     z-index: 1;
     max-width: 500px;
     margin-bottom: -850px !important;
+    background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
     @include for-size(tablet){
+        background: inherit;
         max-width: 650px;
         }
     @include for-size(desktop){
@@ -21,7 +28,7 @@
 
 
 #shaunPortraitWrapper{
-    width: 700px;
+    width: 100%;
     margin-bottom: 40px;
     @include for-size(tablet){
         margin-bottom: 20px;

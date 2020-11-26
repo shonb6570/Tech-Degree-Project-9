@@ -34,10 +34,6 @@ hr,
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-.headline {
-  color: rgba(255, 255, 255, 0.692);
-}
-
 .title {
   color: #e4e4e4;
 }
@@ -126,6 +122,7 @@ hr,
 }
 
 .headline {
+  color: rgba(255, 255, 255, 0.692);
   font-family: "Heaters", Arial, Helvetica, sans-serif;
   font-size: 140pt;
 }
@@ -134,6 +131,11 @@ hr,
     font-size: 160pt;
     margin-left: 0;
   }
+}
+
+.logoDesignHeadline {
+  margin-bottom: 0;
+  line-height: 0.8;
 }
 
 /* ============================================= */
@@ -223,6 +225,7 @@ hr,
 
 .sub-heading {
   font-size: 26pt;
+  max-width: 600px;
 }
 
 #phrase span {
@@ -250,8 +253,29 @@ hr,
   text-transform: uppercase;
 }
 
+.dataAnalytics h1,
+#lightBoxCopy h1 {
+  font-size: 38pt;
+  color: #f74646;
+}
+@media (min-width: 600px) {
+  .dataAnalytics h1,
+#lightBoxCopy h1 {
+    font-size: 46pt;
+  }
+}
+
 .contactCopy {
   font-size: 22pt;
+}
+
+#contact span {
+  font-size: 120pt;
+}
+@media (min-width: 600px) {
+  #contact span {
+    font-size: 150pt;
+  }
 }
 
 .badge-font {
@@ -299,6 +323,10 @@ hr,
   #fsc2020logo {
     width: 60%;
   }
+}
+
+.circleRed {
+  fill: #ce3427;
 }
 
 @keyframes appear {
@@ -441,19 +469,14 @@ hr,
 }
 @media (min-width: 1200px) {
   .video {
-    width: 2400px;
-    height: 1100px;
-  }
-}
-@media only screen and (min-width: 1400px) {
-  .video {
-    height: 1600px;
+    width: 2800px;
+    height: 2800px;
   }
 }
 
 .main-heading {
   position: absolute;
-  top: 640px;
+  top: 540px;
   height: 130px;
 }
 @media (min-width: 600px) {
@@ -462,12 +485,24 @@ hr,
     height: 80px;
   }
 }
+@media (min-width: 1200px) {
+  .main-heading {
+    padding-top: 50px;
+    top: 850px;
+    height: 150px;
+  }
+}
+@media only screen and (min-width: 1600px) {
+  .main-heading {
+    top: 950px;
+  }
+}
 
 #phrase {
   position: absolute;
-  top: 390px;
+  top: 300px;
   left: 0;
-  height: 230px;
+  height: 180px;
   display: inline-block;
   padding: 1em 6em 1em 1em;
   overflow: hidden;
@@ -594,14 +629,15 @@ hr,
 }
 
 #projectsSectionContainer {
-  height: 1329px;
-  background: linear-gradient(#000, rgba(252, 186, 43, 0.475), rgba(252, 186, 43, 0.735), #000);
+  height: 829px;
+  background: linear-gradient(#000, rgba(252, 186, 43, 0.735), #000, #000);
   overflow: hidden;
   z-index: -4;
 }
 @media only screen and (min-width: 600px) {
   #projectsSectionContainer {
-    height: 1400px;
+    background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475), rgba(252, 186, 43, 0.735), #000);
+    height: 650px;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -611,43 +647,35 @@ hr,
 }
 
 #projects {
-  margin-top: 1100px;
+  margin-top: 400px;
   height: 200px;
-  width: 70%;
+  width: 90%;
   position: absolute;
-  left: 15%;
+  font-size: 120pt;
   z-index: 1;
 }
 @media only screen and (min-width: 600px) {
   #projects {
-    width: 70%;
+    width: 100%;
+    font-size: 150pt;
   }
 }
 @media only screen and (min-width: 768px) {
   #projects {
     margin-top: 500px;
-    width: 50%;
-    margin-left: 10%;
+    font-size: 170pt;
   }
 }
-@media only screen and (min-width: 1200px) {
-  #projects {
-    width: 600px;
-    left: 35%;
-    margin-left: 0;
-  }
-}
-
 #mountains {
   height: 250px;
   transform: translateX(-28%);
   position: relative;
-  margin-top: 1080px;
+  margin-top: 350px;
   z-index: 2;
 }
 @media only screen and (min-width: 600px) {
   #mountains {
-    margin-top: 1100px;
+    margin-top: 350px;
     left: 20%;
   }
 }
@@ -667,30 +695,89 @@ hr,
   animation: fade-in 1.5s ease-in-out;
 }
 
+/* ============================================= */
+/*          SVG Keyframes                        */
+/* ============================================= */
+@keyframes offset {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes fill {
+  0% {
+    fill: transparent;
+  }
+  100% {
+    fill: #ce3427;
+  }
+}
+#logoDesign {
+  width: 100%;
+  margin-top: 1200px;
+}
+@media (min-width: 600px) {
+  #logoDesign {
+    width: 80%;
+  }
+}
+@media (min-width: 1200px) {
+  #logoDesign {
+    margin-top: 400px;
+  }
+}
+
+.supermassiveLogoCircle {
+  animation: fill 4s 2s forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.supermassiveLogoOrange {
+  animation: fill 5s 3.5s forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.supermassiveLogoWhite {
+  stroke: white;
+  stroke-width: 2px;
+  stroke-dasharray: 330;
+  stroke-dashoffset: 330;
+  animation: offset 5s 3.5s forwards;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@media only screen and (min-width: 768px) {
+  .supermassiveLogoWhite {
+    stroke-width: 1.2px;
+  }
+}
+
+#logoDesignLink:hover {
+  stroke: #00d9ff;
+}
+
 .gif {
   border: 1px solid white;
   border-radius: 5px;
   background: linear-gradient(to top, rgba(255, 255, 255, 0.872), #000);
-  min-width: 450px;
-  max-width: 100%;
-  height: 400px;
-  padding: 0 10px;
-}
-@media (min-width: 600px) {
-  .gif {
-    width: 90%;
-    margin-right: 0;
-  }
+  width: 400px;
+  height: 300px;
 }
 @media (min-width: 1200px) {
   .gif {
-    width: 70%;
-    margin-left: 150px;
+    width: 500px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .gif-container {
+    padding-right: 80px;
   }
 }
 
 #projectExamples {
-  margin-top: 5rem;
+  margin-top: 20px;
   width: 100%;
   height: 400px;
 }
@@ -754,8 +841,8 @@ hr,
 #awesomeCoCopy:after,
 #drumSpaceCopy:after,
 #dataAnalyticsCopy:after {
-  -webkit-transform: skew(-1deg);
-  -ms-transform: skew(-11deg);
+  -webkit-transform: skew(-14deg);
+  -ms-transform: skew(-14deg);
   transform: skew(-14deg);
 }
 
@@ -816,13 +903,19 @@ hr,
   }
 }
 
+.project-copy {
+  max-width: 600px;
+}
+
 #about {
   z-index: 1;
   max-width: 500px;
   margin-bottom: -850px !important;
+  background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475), rgba(252, 186, 43, 0.735), #000);
 }
 @media (min-width: 600px) {
   #about {
+    background: inherit;
     max-width: 650px;
   }
 }
@@ -844,7 +937,7 @@ hr,
 }
 
 #shaunPortraitWrapper {
-  width: 700px;
+  width: 100%;
   margin-bottom: 40px;
 }
 @media (min-width: 600px) {
@@ -871,6 +964,20 @@ hr,
 @media only screen and (min-width: 1400px) {
   #shaunPortrait {
     max-height: 700px;
+  }
+}
+
+#graphicDesign {
+  margin-top: 1100px;
+}
+@media (min-width: 600px) {
+  #graphicDesign {
+    margin-top: 1000px;
+  }
+}
+@media (min-width: 1200px) {
+  #graphicDesign {
+    margin-top: 400px;
   }
 }
 
@@ -937,31 +1044,31 @@ body {
 .wrapper {
   position: relative;
   overflow-x: hidden;
-  height: 8700px;
+  height: 14000px;
+}
+@media only screen and (min-width: 610px) {
+  .wrapper {
+    height: 13800px;
+  }
 }
 @media only screen and (min-width: 750px) {
   .wrapper {
-    height: 8500px;
-  }
-}
-@media only screen and (min-width: 850px) {
-  .wrapper {
-    height: 7900px;
+    height: 13600px;
   }
 }
 @media only screen and (min-width: 950px) {
   .wrapper {
-    height: 7400px;
+    height: 13500px;
   }
 }
 @media only screen and (min-width: 1000px) {
   .wrapper {
-    height: 6500px;
+    height: 11500px;
   }
 }
 @media (min-width: 1200px) {
   .wrapper {
-    height: 6400px;
+    height: 12000px;
   }
 }
 
