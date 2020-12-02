@@ -6,7 +6,8 @@
 #about {
     z-index: 1;
     max-width: 500px;
-    margin-bottom: -850px !important;
+    // margin-top: -650px !important;
+    // margin-bottom: -450px !important;
     background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
     @include for-size(tablet){
         background: inherit;
@@ -15,7 +16,6 @@
     @include for-size(desktop){
         max-width: 1000px;
         margin-bottom: 0 !important;
-        margin-top: 200px;
         }
     @media only screen and (min-width: 1400px){
         max-width: 1400px;

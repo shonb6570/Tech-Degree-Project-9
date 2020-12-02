@@ -18,42 +18,50 @@
 /* ============================================= */
 
 //sets display to hidden for video not currently playing
-.paused {
-    display: none;
-}
+// .paused {
+//     display: none;
+// }
 
 
 //div container for video elements
 #bgVideo {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 100%;
-    height: 750px;
-
+    overflow-x: hidden;
 }
 
-// BG video media individual elements
-.video {
-    position: relative;
-    height: 850px;
-    min-width: 100%; 
-    min-height: 100%; 
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    animation: fadein 2s;
-    z-index: -1;
 
+.video {
+    min-width: 100vw;
+    height: 650px;
     @include for-size(tablet){
-        height: 980px;
+        min-height: 900px;
     }
 
     @include for-size(desktop){
-        width: 2800px;
-        height: 2800px;
+        min-height: 120vh;
     }
+}
+
+
+// BG video media individual elements
+// .video {
+    // position: absolute;
+    // top: 0;
+    // bottom: 0;
+    // top: 25%;
+    // left: 50%;
+    // transform: translate(-50%,-50%);
+    // animation: fadein 2s;
+    // z-index: -1;
+
+    // @include for-size(tablet){
+    //     height: 980px;
+    // }
+
+    // @include for-size(desktop){
+    //     width: 2800px;
+    //     height: 2800px;
+    // }
     // @media only screen and (min-width: 1400px){
     //     height: 2000px;
     // }
-}
+    // }
