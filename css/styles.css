@@ -629,7 +629,7 @@ hr,
 @media (min-width: 1200px) {
   .main-heading {
     padding-top: 50px;
-    top: 96vh;
+    top: 80vh;
     height: 150px;
   }
 }
