@@ -4,7 +4,8 @@
 
 html {
     min-height: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
+    overflow-y: scroll !important;
 }
 
 
