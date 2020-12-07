@@ -102,18 +102,18 @@
 
 @keyframes move-up-project-title {
     from {
-        transform: none;
+        transform: translateY(80%);
     } 
     to {
-        transform: translateY(-80%);
+        transform: translateY(-70%);
     }
 }
 
 @keyframes move-down-project-title {
     from {
-        transform: translateY(-80%);
+        transform: translateY(-70%);
     } 
     to {
-        transform: none;
+        transform: translateY(80%);
     }
 }

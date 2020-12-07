@@ -4,27 +4,24 @@
 
 
 #projectsSectionContainer{
-    height: 829px;
-    background: linear-gradient(#000, rgba(252, 186, 43, 0.735), #000, #000);
+    height: 470px;
+    background: linear-gradient(#000, #000,  rgba(27, 20, 4, 0.815),rgba(63, 46, 10, 0.815),rgba(133, 98, 22, 0.801),  rgb(252, 186, 43), #000);
     z-index: -4;
+    margin-bottom: 80px;
 
-
-    @media only screen and (min-width: 600px) {
-        background: linear-gradient(#000, #000, rgba(252, 186, 43, 0.475),  rgba(252, 186, 43, 0.735), #000);
-        height: 650px;
-      }
-
-    @media only screen and (min-width: 768px) {
-        height: 800px;
+    @media only screen and (min-width: 1200px){
+        background: linear-gradient(#000, #000,  rgba(27, 20, 4, 0.815),rgba(63, 46, 10, 0.815),rgba(133, 98, 22, 0.801),  rgb(252, 186, 43), #000);
+        height: 570px;
     }
 }
 
 #projects{
-    // margin-top: 400px;
+    margin-top: 400px;
     height: 200px;
     width: 90%;
     font-size: 120pt;
     z-index: 1;
+    transform: translateY(110%);
 
     @media only screen and (min-width: 600px) {
         width: 100%;
@@ -36,28 +33,19 @@
         font-size: 170pt;
     }
 
-    @media only screen and (min-width: 1200px){
-        // margin-top: 580px;
-    }
 }
 
 #mountains {
     height: 250px;
-    transform: translateX(-8%);
+    transform: translateX(-24%);
     z-index: 2;
 
-
-
-    @media only screen and (min-width: 600px) {
-        left: 20%;
-      }
-
     @media only screen and (min-width: 768px) {
-        margin-top: 100px;
+        transform: translateX(-12%);
     }
 
     @media only screen and (min-width: 1200px){
-        left: 40%;
+        transform: translateX(0);
         margin-top: 100px;
     }    
 }

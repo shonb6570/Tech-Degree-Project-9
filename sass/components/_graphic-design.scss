@@ -9,3 +9,16 @@
         margin-top: 600px;
     }
 }
+
+.slick-slide img{
+    height: 500px;
+    width: 100%;
+    padding: 0 5px;
+    @include for-size(desktop){
+        height: 500px;
+    }
+    @media only screen and (min-width: 1600px){
+        height: 600px;
+        padding: 0 10px;
+    } 
+}

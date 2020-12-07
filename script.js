@@ -1,77 +1,30 @@
-// Global Variables
 
-            // video elements
-const vid1 = document.getElementById("vid1");
-const vid2 = document.getElementById("vid2");
-const vid3 = document.getElementById("vid3");
+// landing page video play/pause function
 
-            // quote element
-const phrase = document.getElementById('phrase');
-            // nav brand
-const navBrand = document.getElementById("nav-brand");
-
-            // projects section elements
-const aboutTitle = document.getElementById('aboutTitle');
-const projects = document.getElementById('projects');
-const projectTitleWrapper = document.getElementById('projectTitleWrapper');
-const mountains = document.getElementById('mountains');
-
-            // individual project elements
-// const awesomeCo = document.querySelectorAll(".awesomeCo");
-// const drumSpace = document.querySelectorAll(".drumSpace");
-// const dataAnalytics = document.querySelectorAll(".dataAnalytics");
-// const styleGuide = document.querySelectorAll(".styleGuide");
-// const fsc2020 = document.querySelectorAll(".fsc2020");
-
-
-
-const graphicDesignHeadline = document.getElementById("graphicDesignHeadline");
+window.onload = function() {
+  //gather .video elements in a variable
+  var vids = document.getElementsByClassName('video');
+  //create an array to loop through 
+  Array.from(vids).forEach((item) => {
+    var nextVid = item.attributes['data-next'].value;
+    item.addEventListener("ended", () => {
+      //playVideo(nextVid);
+      // play next video
+      var nextVidId = document.getElementById(nextVid);
+      console.log("next video start", nextVidId);
+      nextVidId.muted = true;
+      nextVidId.play();
+      nextVidId.classList.add("video");
+      nextVidId.classList.remove('paused');
+      // pause current video
+      item.classList.remove("video");
+      item.classList.add("paused");
+      console.log("previous vid paused", item);
+    });
+  });
+};     
 
 
-
-
-/**
- * Window onload play order for embedded videos
- */
-// window.onload = function(){ 
-//     vid1.addEventListener("ended", function(){ 
-//         playVideo("vid2"); 
-//         pause(vid1); // add display "none" to video div after end
-//         play(vid2); // make the next video div visible
-//     });
-    
-    
-//     vid2.addEventListener("ended", function(){ 
-//         playVideo("vid3"); 
-//         pause(vid2);
-//         play(vid3);
-//     });
-//     vid3.addEventListener("ended", function(){ 
-//         playVideo("vid1"); 
-//         pause(vid3);
-//         play(vid1);
-//     });    
-// }
-/**
- * Plays video based on ID of a video element
- */
-
-// const playVideo = (videoID) => {
-//     const videoElement = document.getElementById(videoID);
-//     videoElement.muted = true;
-//     videoElement.play();
-//     videoElement.classList.remove("paused"); 
-// }
-
-// const pause = (id) => {
-//     id.classList.remove("video");
-//     id.classList.add("paused");
-// }
-
-// const play = (id) => {
-//     id.classList.remove("paused");
-//     id.classList.add("video");
-// }
 
 //Quotes (for landing/main page)
 
@@ -85,20 +38,20 @@ const quotes = [
     ['"He who is not courageous enough to take risks will accomplish nothing in life" <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp - Muhammad Ali']
     ];
     
-    
-    /**
-     * Generates random quote based on a random number in the quotes array 
-     */
-    const generateQuote = () => {
-        //create random number between 1 - 7 for quote selection
-        let randNum = Math.floor( Math.random() * (quotes.length) );
-        //select quote container span
-        const quoteContainer = document.querySelector('#phrase span');
-        // set html content of quote container
-        quoteContainer.innerHTML = quotes[randNum];
-    }; 
+ // quote element
+/**
+ * Generates random quote based on a random number in the quotes array 
+ */
+const generateQuote = () => {
+    //create random number between 1 - 7 for quote selection
+    let randNum = Math.floor( Math.random() * (quotes.length) );
+    //select quote container span
+    const quoteContainer = document.querySelector('#phrase span');
+    // set html content of quote container
+    quoteContainer.innerHTML = quotes[randNum];
+}; 
 
-    generateQuote();
+generateQuote();
 
 
 // Slide-in function for projects
@@ -106,44 +59,17 @@ const quotes = [
 // else, slide off screen
 
             // animation options
-const rightAnimation = "move-right 1.5s ease-in-out forwards";
-const leftAnimation = "move-left 1.5s ease-in-out forwards";
-const rightAnimation2 = "move-right-two 1.5s ease-in-out forwards";
-const leftAnimation2 = "move-left-two 1.5s ease-in-out forwards";
-const moveRightBG = "move-right-mountains 1.5s ease-in-out forwards";
-const moveLeftBG = "move-left-mountains 1.5s ease-in-out forwards";
-const moveUpBG = "move-up-project-title 1s ease-in-out forwards";
-const moveDownBG = "move-down-project-title 1s ease-in-out forwards";
-const appear = "appear 1s ease-in-out forwards";
-const hide = "hide .1s ease-in-out forwards";
+// const rightAnimation = "move-right 1.5s ease-in-out forwards";
+// const leftAnimation = "move-left 1.5s ease-in-out forwards";
+// const rightAnimation2 = "move-right-two 1.5s ease-in-out forwards";
+// const leftAnimation2 = "move-left-two 1.5s ease-in-out forwards";
+// const moveRightBG = "move-right-mountains 1.5s ease-in-out forwards";
+// const moveLeftBG = "move-left-mountains 1.5s ease-in-out forwards";
+// const moveUpBG = "move-up-project-title 1s ease-in-out forwards";
+// const moveDownBG = "move-down-project-title 1s ease-in-out forwards";
+// const appear = "appear 1s ease-in-out forwards";
+// const hide = "hide .1s ease-in-out forwards";
 
-// const distance = window.scrollY;
-
-
-// slide function takes the current scroll value (position on page) and the element targeted, 
-// and adds an animation
-
-// const animate = (scrollValue, element, animationOne, animationTwo) => {
-//     const distance = window.scrollY;
-//     if(distance >= scrollValue){
-//             element.style.animation = animationOne;
-//         } else {
-//             element.style.animation = animationTwo;
-//     }
-// }
-
-// const animate2 = (scrollValue, el, animationOne, animationTwo) => {
-//     const distance = window.scrollY;
-//     if(distance >= scrollValue){
-//         el.forEach(element => {
-//             element.style.animation = animationOne;
-//         }); 
-//     } else {
-//         el.forEach(element => {
-//             element.style.animation = animationTwo;
-//         }); 
-//     }
-// }
 
 
 //IntersectionObserver loads element animations when in view
@@ -155,6 +81,7 @@ let animationElement4;
 let animationElement5;
 let animationElement6;
 let animationElement7;
+let animationElement8;
 
 let prevRatio = 0.0;
 
@@ -162,11 +89,12 @@ window.addEventListener("load", (event) => {
     
   animationElement1 = document.getElementById("graphicDesignSection");
   animationElement2 = document.getElementById("about");
-  animationElement3 = document.getElementById("animateProjectContainer1");
-  animationElement4 = document.getElementById("animateProjectContainer2");
-  animationElement5 = document.getElementById("animateProjectContainer3");
-  animationElement6 = document.getElementById("animateProjectContainer4");
-  animationElement7 = document.getElementById("animateProjectContainer5");
+  animationElement3 = document.getElementById("projectTitleWrapper");
+  animationElement4 = document.getElementById("animateProjectContainer1");
+  animationElement5 = document.getElementById("animateProjectContainer2");
+  animationElement6 = document.getElementById("animateProjectContainer3");
+  animationElement7 = document.getElementById("animateProjectContainer4");
+  animationElement8 = document.getElementById("animateProjectContainer5");
 
   createObserver();
 }, false);
@@ -178,7 +106,7 @@ function createObserver() {
     let options = {
       root: null,
       //margin of space above and below item before item is observed(before callback animation is fired)
-      rootMargin: "400px 50px",
+      rootMargin: "300px",
       threshold: [1]
     };
   
@@ -190,92 +118,58 @@ function createObserver() {
     observer.observe(animationElement5);
     observer.observe(animationElement6);
     observer.observe(animationElement7);
+    observer.observe(animationElement8);
   }
 
 
   function handleIntersect(entries, observer) {
     entries.forEach((entry) => {
+      let animateIn = entry.target.dataset.in;
+      let animateOut = entry.target.dataset.out;
       if (entry.intersectionRatio === 1) {
-        entry.target.firstElementChild.style.animation = leftAnimation2;
+        entry.target.firstElementChild.style.animation = animateIn;
       } else {
-        entry.target.firstElementChild.style.animation = rightAnimation2;
+        entry.target.firstElementChild.style.animation = animateOut;
       }
   
       prevRatio = entry.intersectionRatio;
     });
   }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//parallax slide animation for elements on page
-
-// window.addEventListener("scroll", function() {
-
-//     const mobile = 575;
-//     const desktop = 1100;
-//     animate(201, aboutTitle, leftAnimation2, rightAnimation2);
-//     animate(950, navBrand, appear, hide);
-//     animate(1700, graphicDesignHeadline, leftAnimation2, rightAnimation2);
-
-    // slide in projects on scroll
-    // if (window.innerWidth <= mobile) {
-
-        // graphicDesignSectionContainer.style.display = "none";
-
-        // animate(2700, projects, moveUpBG, moveDownBG);
-        // animate(2700, mountains, moveRightBG, moveLeftBG);    
-        // animate2(2900, awesomeCo, leftAnimation2, rightAnimation2);
-        // animate2(3200, drumSpace, leftAnimation2, rightAnimation2);
-        // animate2(3950, dataAnalytics, leftAnimation2, rightAnimation2);
-        // animate2(4350, styleGuide, leftAnimation2, rightAnimation2);
-        // animate2(4550, fsc2020, leftAnimation2, rightAnimation2);
-
-//    } else if (window.innerWidth > mobile && window.innerWidth < desktop ) {
-
-        // graphicDesignSectionContainer.style.display = "block";
-
-
-//         animate(2700, projects, moveUpBG, moveDownBG);
-//         animate(2700, mountains, moveRightBG, moveLeftBG);    
-//         animate2(2900, awesomeCo, leftAnimation2, rightAnimation2);
-//         animate2(3200, drumSpace, leftAnimation2, rightAnimation2);
-//         animate2(3950, dataAnalytics, leftAnimation2, rightAnimation2);
-//         animate2(4350, styleGuide, leftAnimation2, rightAnimation2);
-//         animate2(4550, fsc2020, leftAnimation2, rightAnimation2);
-
-//     } else {
-//         animate(2700, projects, moveUpBG, moveDownBG);
-//         animate(2700, mountains, moveRightBG, moveLeftBG);    
-//         animate2(2900, awesomeCo, leftAnimation2, rightAnimation2);
-//         animate2(3200, drumSpace, leftAnimation2, rightAnimation2);
-//         animate2(3950, dataAnalytics, leftAnimation2, rightAnimation2);
-//         animate2(4350, styleGuide, leftAnimation2, rightAnimation2);
-//         animate2(4550, fsc2020, leftAnimation2, rightAnimation2);
-
-
-//     } 
-// });
-
-
-
-
+  $('.auto-play').slick({
+    mobileFirst:true,
+    dots: true,
+    infinite: true,
+    speed: 700,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    arrows:false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          centerMode: false,
+          }      
+      },
+      {
+        breakpoint: 1000,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          centerMode: false,
+          }      
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1,
+          centerMode: false,
+          }      
+      }
+  ]
+ });

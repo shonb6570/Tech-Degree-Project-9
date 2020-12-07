@@ -9,17 +9,14 @@
     top: 540px;
     height: 130px;
     @include for-size(tablet){
-        top: 750px;
+        top: 65%;
         height: 80px;
     }
     @include for-size(desktop){
         padding-top: 50px;
-        top: 850px;
+        top: 96vh;
         height: 150px;
     }
-    @media only screen and (min-width: 1600px) {
-        top: 950px;
-  }
 }
 
 //Quote and surrounding elements
