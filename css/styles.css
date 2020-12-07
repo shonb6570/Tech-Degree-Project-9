@@ -1181,7 +1181,7 @@ div.auto-play {
 
 html {
   min-height: 100%;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 body {
