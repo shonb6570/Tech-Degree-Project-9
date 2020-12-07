@@ -600,10 +600,6 @@ hr,
   display: none;
 }
 
-#bgVideo {
-  overflow-x: hidden !important;
-}
-
 .video {
   min-width: 100vw;
   height: 650px;
@@ -821,10 +817,6 @@ hr,
 
 .animate {
   animation: fade-in 1.5s ease-in-out;
-}
-
-.animationElement {
-  overflow-x: hidden !important;
 }
 
 /* ============================================= */
