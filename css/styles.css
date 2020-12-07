@@ -601,7 +601,7 @@ hr,
 }
 
 #bgVideo {
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 
 .video {
@@ -821,6 +821,10 @@ hr,
 
 .animate {
   animation: fade-in 1.5s ease-in-out;
+}
+
+.animationElement {
+  overflow-x: hidden !important;
 }
 
 /* ============================================= */
@@ -1177,8 +1181,7 @@ div.auto-play {
 
 html {
   min-height: 100%;
-  overflow: hidden;
-  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
 
 body {
@@ -1189,10 +1192,6 @@ body {
 
 .navigation {
   z-index: 3;
-}
-
-#home {
-  overflow-x: hidden;
 }
 
 a:hover {

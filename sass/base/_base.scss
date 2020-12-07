@@ -4,8 +4,7 @@
 
 html {
     min-height: 100%;
-    overflow: hidden;
-    overflow-y: scroll !important;
+    overflow-x: hidden;
 }
 
 
@@ -17,10 +16,6 @@ body {
 
 .navigation {
     z-index: 3;
-}
-
-#home {
-    overflow-x: hidden;
 }
 
 
