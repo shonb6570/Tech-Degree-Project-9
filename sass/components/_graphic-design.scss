@@ -10,6 +10,12 @@
     }
 }
 
+div.auto-play {
+    width: 1px; 
+    min-width: 100%;
+    *width: 100%;
+}
+
 .slick-slide img{
     height: 500px;
     width: 100%;
